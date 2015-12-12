@@ -45,7 +45,7 @@
             this.popupContainerEdit2 = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
             this.gcAllProducts = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvAllProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,7 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).BeginInit();
             this.popupContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).BeginInit();
@@ -174,7 +174,6 @@
             this.gvProducts.OptionsView.ShowViewCaption = true;
             this.gvProducts.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             resources.ApplyResources(this.gvProducts, "gvProducts");
-            this.gvProducts.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvProducts_MasterRowGetChildList);
             this.gvProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProducts_FocusedRowChanged);
             this.gvProducts.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvProducts_CellValueChanged);
             // 
@@ -255,19 +254,23 @@
             // 
             this.gcAllProducts.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.gcAllProducts, "gcAllProducts");
-            this.gcAllProducts.MainView = this.gridView1;
+            this.gcAllProducts.MainView = this.gvAllProducts;
             this.gcAllProducts.Name = "gcAllProducts";
             this.gcAllProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gvAllProducts});
             // 
-            // gridView1
+            // gvAllProducts
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvAllProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn10,
             this.gridColumn11,
             this.gridColumn12});
-            this.gridView1.GridControl = this.gcAllProducts;
-            this.gridView1.Name = "gridView1";
+            this.gvAllProducts.GridControl = this.gcAllProducts;
+            this.gvAllProducts.Name = "gvAllProducts";
+            this.gvAllProducts.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvAllProducts_MasterRowEmpty);
+            this.gvAllProducts.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvAllProducts_MasterRowGetChildList);
+            this.gvAllProducts.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvAllProducts_MasterRowGetRelationName);
+            this.gvAllProducts.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvAllProducts_MasterRowGetRelationCount);
             // 
             // gridColumn10
             // 
@@ -512,7 +515,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).EndInit();
             this.popupContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).EndInit();
@@ -575,7 +578,7 @@
         private DevExpress.XtraEditors.PopupContainerControl popupContainerControl1;
         private DevExpress.XtraEditors.PopupContainerEdit popupContainerEdit2;
         private DevExpress.XtraGrid.GridControl gcAllProducts;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvAllProducts;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;

@@ -15,6 +15,7 @@ namespace Inventory_Sales.Forms
     {
         DataTable dtInvoiceProducts;
         InventoryAPI API;
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -26,7 +27,8 @@ namespace Inventory_Sales.Forms
             API = new InventoryAPI();
 
             DataTable dt = API.GetAllProducts("1");
-            //DataSet product_stock = API.GetProductStock("1", "1", "1");
+            DataTable ds1 = API.GetPricesTypes();
+            DataTable pricesPerProduct = API.GetPricesPerProduct("1", "1");
 
             gcAllProducts.DataSource = dt;
             gcSelectedProducts.DataSource = InitializeGridControlDataSource();
@@ -95,7 +97,22 @@ namespace Inventory_Sales.Forms
             return subtotal;
         }
 
-        private void gvProducts_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)
+        private void gvAllProducts_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
+        {
+            e.IsEmpty = false;
+        }
+
+        private void gvAllProducts_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)
+        {
+
+        }
+
+        private void gvAllProducts_MasterRowGetRelationCount(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventArgs e)
+        {
+
+        }
+
+        private void gvAllProducts_MasterRowGetRelationName(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventArgs e)
         {
 
         }

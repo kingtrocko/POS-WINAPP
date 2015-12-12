@@ -67,6 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsAllProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAllProducts.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InventoryAPI.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -100,6 +105,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
+    <None Include="dsAllProducts.xsc">
+      <DependentUpon>dsAllProducts.xsd</DependentUpon>
+    </None>
+    <None Include="dsAllProducts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAllProducts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsAllProducts.xss">
+      <DependentUpon>dsAllProducts.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

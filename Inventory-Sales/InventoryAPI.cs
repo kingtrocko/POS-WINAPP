@@ -41,7 +41,7 @@ namespace Inventory_Sales
 
         public DataSet GetProductStock(string product_id, string client_id, string local_id)
         {
-            var request = new RestRequest("/api/productstock/{product_id}/");
+            var request = new RestRequest("/api/productstock/{product_id}/", Method.GET);
             request.AddParameter("product_id", product_id, ParameterType.UrlSegment);
             request.AddParameter("client_id", client_id, ParameterType.QueryString);
             request.AddParameter("local_id", local_id, ParameterType.QueryString);
@@ -62,7 +62,7 @@ namespace Inventory_Sales
        
         public DataTable GetPricesPerProduct(string product_id, string price_id)
         {
-            var req = new RestRequest("/api/products/{product_id}/prices/{price_id}");
+            var req = new RestRequest("/api/products/{product_id}/prices/{price_id}", Method.GET);
             req.AddParameter("product_id", product_id, ParameterType.UrlSegment);
             req.AddParameter("price_id", price_id, ParameterType.UrlSegment);
 
@@ -74,6 +74,16 @@ namespace Inventory_Sales
             }
             else
                 return new DataTable("prices");
+        }
+
+        public DataTable GetPricesTypes()
+        {
+            var req = new RestRequest('/api/prices/types', Method.GET);
+
+            IRestResponse res = client.Execute(req);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+
+            return ds.Tables["prices_types"];
         }
     }
 }
