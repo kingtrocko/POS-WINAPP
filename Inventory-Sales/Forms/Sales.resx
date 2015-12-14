@@ -117,36 +117,184 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="gridColumn25.Caption" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gridColumn25.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn25.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn26.Caption" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="gridColumn26.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn26.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn27.Caption" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="gridColumn27.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn27.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gcAllProducts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gridColumn28.Caption" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <data name="gridColumn28.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn28.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn29.Caption" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="gridColumn29.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn29.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="col_precio.Caption" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="col_precio.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="col_precio.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gvPrecioDescuento.ViewCaption" xml:space="preserve">
+    <value>Precio Descuento</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gcAllProducts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridColumn10.Caption" xml:space="preserve">
+    <value>CODIGO</value>
+  </data>
+  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn10.Width" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="gridColumn11.Caption" xml:space="preserve">
+    <value>NOMBRE</value>
+  </data>
+  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn11.Width" type="System.Int32, mscorlib">
+    <value>440</value>
+  </data>
+  <data name="gridColumn12.Caption" xml:space="preserve">
+    <value>STOCK</value>
+  </data>
+  <data name="gridColumn12.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="gridColumn12.Width" type="System.Int32, mscorlib">
+    <value>224</value>
+  </data>
+  <data name="gcAllProducts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 253</value>
+  </data>
+  <data name="gcAllProducts.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gcAllProducts.Name" xml:space="preserve">
+    <value>gcAllProducts</value>
+  </data>
+  <data name="&gt;&gt;gcAllProducts.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gcAllProducts.Parent" xml:space="preserve">
+    <value>popupContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;gcAllProducts.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gvPrecioVenta.ViewCaption" xml:space="preserve">
+    <value>Precio Venta</value>
+  </data>
+  <data name="gridColumn22.Caption" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <data name="gridColumn22.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn22.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn23.Caption" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="gridColumn23.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn23.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridColumn24.Caption" xml:space="preserve">
+    <value>Precio de Venta</value>
+  </data>
+  <data name="gridColumn24.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn24.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="gcSelectedProducts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="gcSelectedProducts.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
   </data>
   <data name="gcSelectedProducts.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 73</value>
   </data>
-  <data name="gvProducts.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Red</value>
   </data>
-  <data name="gvProducts.Appearance.FocusedCell.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.FocusedCell.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 10pt</value>
   </data>
-  <data name="gvProducts.Appearance.FocusedRow.BackColor" type="System.Drawing.Color, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.FocusedRow.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>GradientActiveCaption</value>
   </data>
-  <data name="gvProducts.Appearance.FocusedRow.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.FocusedRow.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt, style=Bold</value>
   </data>
-  <data name="gvProducts.Appearance.ViewCaption.BackColor" type="System.Drawing.Color, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.ViewCaption.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>White</value>
   </data>
-  <data name="gvProducts.Appearance.ViewCaption.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.ViewCaption.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt, style=Bold</value>
   </data>
-  <data name="gvProducts.Appearance.ViewCaption.ForeColor" type="System.Drawing.Color, System.Drawing">
+  <data name="gvSelectedProducts.Appearance.ViewCaption.ForeColor" type="System.Drawing.Color, System.Drawing">
     <value>DimGray</value>
   </data>
   <data name="gridColumn15.Caption" xml:space="preserve">
@@ -155,7 +303,6 @@
   <data name="gridColumn21.Caption" xml:space="preserve">
     <value>#</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="gridColumn21.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -163,7 +310,7 @@
     <value>0</value>
   </data>
   <data name="gridColumn21.Width" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>37</value>
   </data>
   <data name="gridColumn16.Caption" xml:space="preserve">
     <value>Nombre</value>
@@ -175,7 +322,7 @@
     <value>1</value>
   </data>
   <data name="gridColumn16.Width" type="System.Int32, mscorlib">
-    <value>283</value>
+    <value>302</value>
   </data>
   <data name="gridColumn17.Caption" xml:space="preserve">
     <value>UM</value>
@@ -187,7 +334,7 @@
     <value>2</value>
   </data>
   <data name="gridColumn17.Width" type="System.Int32, mscorlib">
-    <value>79</value>
+    <value>153</value>
   </data>
   <data name="gridColumn20.Caption" xml:space="preserve">
     <value>Cantidad</value>
@@ -223,13 +370,13 @@
     <value>5</value>
   </data>
   <data name="gridColumn19.Width" type="System.Int32, mscorlib">
-    <value>136</value>
+    <value>107</value>
   </data>
-  <data name="gvProducts.ViewCaption" xml:space="preserve">
+  <data name="gvSelectedProducts.ViewCaption" xml:space="preserve">
     <value>Productos Seleccionados</value>
   </data>
   <data name="gcSelectedProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 294</value>
+    <value>593, 275</value>
   </data>
   <data name="gcSelectedProducts.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -246,75 +393,15 @@
   <data name="&gt;&gt;gcSelectedProducts.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="popupContainerEdit2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="pceSearchProduct.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 31</value>
   </data>
-  <data name="popupContainerEdit2.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="pceSearchProduct.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
   <assembly alias="DevExpress.Utils.v14.1" name="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="popupContainerEdit2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+  <data name="pceSearchProduct.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
     <value>Combo</value>
-  </data>
-  <data name="gcAllProducts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="gcAllProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="gridColumn10.Caption" xml:space="preserve">
-    <value>CODIGO</value>
-  </data>
-  <data name="gridColumn10.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn10.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gridColumn10.Width" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="gridColumn11.Caption" xml:space="preserve">
-    <value>NOMBRE</value>
-  </data>
-  <data name="gridColumn11.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn11.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gridColumn11.Width" type="System.Int32, mscorlib">
-    <value>459</value>
-  </data>
-  <data name="gridColumn12.Caption" xml:space="preserve">
-    <value>STOCK</value>
-  </data>
-  <data name="gridColumn12.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn12.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gridColumn12.Width" type="System.Int32, mscorlib">
-    <value>461</value>
-  </data>
-  <data name="gcAllProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>496, 253</value>
-  </data>
-  <data name="gcAllProducts.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;gcAllProducts.Name" xml:space="preserve">
-    <value>gcAllProducts</value>
-  </data>
-  <data name="&gt;&gt;gcAllProducts.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gcAllProducts.Parent" xml:space="preserve">
-    <value>popupContainerControl1</value>
-  </data>
-  <data name="&gt;&gt;gcAllProducts.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="popupContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 79</value>
@@ -337,22 +424,22 @@
   <data name="&gt;&gt;popupContainerControl1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="popupContainerEdit2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="pceSearchProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>409, 24</value>
   </data>
-  <data name="popupContainerEdit2.TabIndex" type="System.Int32, mscorlib">
+  <data name="pceSearchProduct.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;popupContainerEdit2.Name" xml:space="preserve">
-    <value>popupContainerEdit2</value>
+  <data name="&gt;&gt;pceSearchProduct.Name" xml:space="preserve">
+    <value>pceSearchProduct</value>
   </data>
-  <data name="&gt;&gt;popupContainerEdit2.Type" xml:space="preserve">
+  <data name="&gt;&gt;pceSearchProduct.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.PopupContainerEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;popupContainerEdit2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pceSearchProduct.Parent" xml:space="preserve">
     <value>gcSearchBar</value>
   </data>
-  <data name="&gt;&gt;popupContainerEdit2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pceSearchProduct.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="gcSearchBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -460,72 +547,6 @@
   <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="sleProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 169</value>
-  </data>
-  <data name="sleProducts.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11pt</value>
-  </data>
-  <data name="sleProducts.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
-    <value>Combo</value>
-  </data>
-  <data name="sleProducts.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="gridColumn8.Caption" xml:space="preserve">
-    <value>Codigo</value>
-  </data>
-  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gridColumn9.Caption" xml:space="preserve">
-    <value>Nombre</value>
-  </data>
-  <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gridColumn13.Caption" xml:space="preserve">
-    <value>Costo unitario</value>
-  </data>
-  <data name="gridColumn13.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn13.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gridColumn14.Caption" xml:space="preserve">
-    <value>Inventario</value>
-  </data>
-  <data name="gridColumn14.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn14.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="sleProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
-  </data>
-  <data name="sleProducts.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;sleProducts.Name" xml:space="preserve">
-    <value>sleProducts</value>
-  </data>
-  <data name="&gt;&gt;sleProducts.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SearchLookUpEdit, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;sleProducts.Parent" xml:space="preserve">
-    <value>panelControl1</value>
-  </data>
-  <data name="&gt;&gt;sleProducts.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 347</value>
   </data>
@@ -545,7 +566,7 @@
     <value>panelControl1</value>
   </data>
   <data name="&gt;&gt;txtSubTotal.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>775, 12</value>
@@ -709,10 +730,100 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Ventas</value>
   </data>
-  <data name="&gt;&gt;gvProducts.Name" xml:space="preserve">
-    <value>gvProducts</value>
+  <data name="&gt;&gt;gvPrecioVenta.Name" xml:space="preserve">
+    <value>gvPrecioVenta</value>
   </data>
-  <data name="&gt;&gt;gvProducts.Type" xml:space="preserve">
+  <data name="&gt;&gt;gvPrecioVenta.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Name" xml:space="preserve">
+    <value>gridColumn25</value>
+  </data>
+  <data name="&gt;&gt;gridColumn25.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Name" xml:space="preserve">
+    <value>gridColumn26</value>
+  </data>
+  <data name="&gt;&gt;gridColumn26.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn27.Name" xml:space="preserve">
+    <value>gridColumn27</value>
+  </data>
+  <data name="&gt;&gt;gridColumn27.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gvPrecioDescuento.Name" xml:space="preserve">
+    <value>gvPrecioDescuento</value>
+  </data>
+  <data name="&gt;&gt;gvPrecioDescuento.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn28.Name" xml:space="preserve">
+    <value>gridColumn28</value>
+  </data>
+  <data name="&gt;&gt;gridColumn28.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn29.Name" xml:space="preserve">
+    <value>gridColumn29</value>
+  </data>
+  <data name="&gt;&gt;gridColumn29.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;col_precio.Name" xml:space="preserve">
+    <value>col_precio</value>
+  </data>
+  <data name="&gt;&gt;col_precio.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gvAllProducts.Name" xml:space="preserve">
+    <value>gvAllProducts</value>
+  </data>
+  <data name="&gt;&gt;gvAllProducts.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">
+    <value>gridColumn10</value>
+  </data>
+  <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
+    <value>gridColumn11</value>
+  </data>
+  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn12.Name" xml:space="preserve">
+    <value>gridColumn12</value>
+  </data>
+  <data name="&gt;&gt;gridColumn12.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn22.Name" xml:space="preserve">
+    <value>gridColumn22</value>
+  </data>
+  <data name="&gt;&gt;gridColumn22.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn23.Name" xml:space="preserve">
+    <value>gridColumn23</value>
+  </data>
+  <data name="&gt;&gt;gridColumn23.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn24.Name" xml:space="preserve">
+    <value>gridColumn24</value>
+  </data>
+  <data name="&gt;&gt;gridColumn24.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gvSelectedProducts.Name" xml:space="preserve">
+    <value>gvSelectedProducts</value>
+  </data>
+  <data name="&gt;&gt;gvSelectedProducts.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;gridColumn15.Name" xml:space="preserve">
@@ -757,30 +868,6 @@
   <data name="&gt;&gt;gridColumn19.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gvAllProducts.Name" xml:space="preserve">
-    <value>gvAllProducts</value>
-  </data>
-  <data name="&gt;&gt;gvAllProducts.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn10.Name" xml:space="preserve">
-    <value>gridColumn10</value>
-  </data>
-  <data name="&gt;&gt;gridColumn10.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn11.Name" xml:space="preserve">
-    <value>gridColumn11</value>
-  </data>
-  <data name="&gt;&gt;gridColumn11.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn12.Name" xml:space="preserve">
-    <value>gridColumn12</value>
-  </data>
-  <data name="&gt;&gt;gridColumn12.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;nbgSales.Name" xml:space="preserve">
     <value>nbgSales</value>
   </data>
@@ -792,36 +879,6 @@
   </data>
   <data name="&gt;&gt;nbiCreateNewSale.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;sleProductsView.Name" xml:space="preserve">
-    <value>sleProductsView</value>
-  </data>
-  <data name="&gt;&gt;sleProductsView.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn8.Name" xml:space="preserve">
-    <value>gridColumn8</value>
-  </data>
-  <data name="&gt;&gt;gridColumn8.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn9.Name" xml:space="preserve">
-    <value>gridColumn9</value>
-  </data>
-  <data name="&gt;&gt;gridColumn9.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn13.Name" xml:space="preserve">
-    <value>gridColumn13</value>
-  </data>
-  <data name="&gt;&gt;gridColumn13.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;gridColumn14.Name" xml:space="preserve">
-    <value>gridColumn14</value>
-  </data>
-  <data name="&gt;&gt;gridColumn14.Type" xml:space="preserve">
-    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;layoutControlGroup1.Name" xml:space="preserve">
     <value>layoutControlGroup1</value>

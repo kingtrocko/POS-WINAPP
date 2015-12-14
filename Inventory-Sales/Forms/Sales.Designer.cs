@@ -30,10 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            this.gvPrecioVenta = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAllProducts = new DevExpress.XtraGrid.GridControl();
+            this.gvPrecioDescuento = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_precio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvAllProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
-            this.gvProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvSelectedProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,24 +60,13 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcSearchBar = new DevExpress.XtraEditors.GroupControl();
-            this.popupContainerEdit2 = new DevExpress.XtraEditors.PopupContainerEdit();
+            this.pceSearchProduct = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
-            this.gcAllProducts = new DevExpress.XtraGrid.GridControl();
-            this.gvAllProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.nbcSideBarMenu = new DevExpress.XtraNavBar.NavBarControl();
             this.nbgSales = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiCreateNewSale = new DevExpress.XtraNavBar.NavBarItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.sleProducts = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.sleProductsView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtSubTotal = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -75,26 +82,26 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPrecioDescuento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchBar)).BeginInit();
             this.gcSearchBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popupContainerEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).BeginInit();
             this.popupContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sleProducts.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sleProductsView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -104,6 +111,179 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gvPrecioVenta
+            // 
+            this.gvPrecioVenta.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn25,
+            this.gridColumn26,
+            this.gridColumn27});
+            this.gvPrecioVenta.GridControl = this.gcAllProducts;
+            this.gvPrecioVenta.Name = "gvPrecioVenta";
+            this.gvPrecioVenta.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioVenta.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioVenta.OptionsBehavior.Editable = false;
+            this.gvPrecioVenta.OptionsBehavior.ReadOnly = true;
+            this.gvPrecioVenta.OptionsCustomization.AllowColumnMoving = false;
+            this.gvPrecioVenta.OptionsCustomization.AllowColumnResizing = false;
+            this.gvPrecioVenta.OptionsCustomization.AllowFilter = false;
+            this.gvPrecioVenta.OptionsCustomization.AllowGroup = false;
+            this.gvPrecioVenta.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvPrecioVenta.OptionsCustomization.AllowSort = false;
+            this.gvPrecioVenta.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvPrecioVenta.OptionsView.ShowGroupPanel = false;
+            this.gvPrecioVenta.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            resources.ApplyResources(this.gvPrecioVenta, "gvPrecioVenta");
+            this.gvPrecioVenta.DoubleClick += new System.EventHandler(this.gvPrecioVenta_DoubleClick);
+            // 
+            // gridColumn25
+            // 
+            resources.ApplyResources(this.gridColumn25, "gridColumn25");
+            this.gridColumn25.FieldName = "nombre_unidad";
+            this.gridColumn25.Name = "gridColumn25";
+            // 
+            // gridColumn26
+            // 
+            resources.ApplyResources(this.gridColumn26, "gridColumn26");
+            this.gridColumn26.FieldName = "unidades";
+            this.gridColumn26.Name = "gridColumn26";
+            // 
+            // gridColumn27
+            // 
+            resources.ApplyResources(this.gridColumn27, "gridColumn27");
+            this.gridColumn27.FieldName = "precio";
+            this.gridColumn27.Name = "gridColumn27";
+            // 
+            // gcAllProducts
+            // 
+            this.gcAllProducts.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.gcAllProducts, "gcAllProducts");
+            gridLevelNode1.LevelTemplate = this.gvPrecioVenta;
+            gridLevelNode1.RelationName = "Precio_Venta";
+            gridLevelNode2.LevelTemplate = this.gvPrecioDescuento;
+            gridLevelNode2.RelationName = "Precio_Descuento";
+            this.gcAllProducts.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1,
+            gridLevelNode2});
+            this.gcAllProducts.MainView = this.gvAllProducts;
+            this.gcAllProducts.Name = "gcAllProducts";
+            this.gcAllProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPrecioDescuento,
+            this.gvAllProducts,
+            this.gvPrecioVenta});
+            // 
+            // gvPrecioDescuento
+            // 
+            this.gvPrecioDescuento.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn28,
+            this.gridColumn29,
+            this.col_precio});
+            this.gvPrecioDescuento.GridControl = this.gcAllProducts;
+            this.gvPrecioDescuento.Name = "gvPrecioDescuento";
+            this.gvPrecioDescuento.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioDescuento.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioDescuento.OptionsBehavior.Editable = false;
+            this.gvPrecioDescuento.OptionsBehavior.ReadOnly = true;
+            this.gvPrecioDescuento.OptionsCustomization.AllowColumnMoving = false;
+            this.gvPrecioDescuento.OptionsCustomization.AllowColumnResizing = false;
+            this.gvPrecioDescuento.OptionsCustomization.AllowFilter = false;
+            this.gvPrecioDescuento.OptionsCustomization.AllowGroup = false;
+            this.gvPrecioDescuento.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvPrecioDescuento.OptionsCustomization.AllowSort = false;
+            this.gvPrecioDescuento.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvPrecioDescuento.OptionsView.ShowGroupPanel = false;
+            this.gvPrecioDescuento.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            resources.ApplyResources(this.gvPrecioDescuento, "gvPrecioDescuento");
+            // 
+            // gridColumn28
+            // 
+            resources.ApplyResources(this.gridColumn28, "gridColumn28");
+            this.gridColumn28.FieldName = "nombre_unidad";
+            this.gridColumn28.Name = "gridColumn28";
+            // 
+            // gridColumn29
+            // 
+            resources.ApplyResources(this.gridColumn29, "gridColumn29");
+            this.gridColumn29.FieldName = "unidades";
+            this.gridColumn29.Name = "gridColumn29";
+            // 
+            // col_precio
+            // 
+            resources.ApplyResources(this.col_precio, "col_precio");
+            this.col_precio.FieldName = "precio";
+            this.col_precio.Name = "col_precio";
+            // 
+            // gvAllProducts
+            // 
+            this.gvAllProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12});
+            this.gvAllProducts.GridControl = this.gcAllProducts;
+            this.gvAllProducts.Name = "gvAllProducts";
+            this.gvAllProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvAllProducts.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvAllProducts.OptionsBehavior.Editable = false;
+            this.gvAllProducts.OptionsBehavior.ReadOnly = true;
+            this.gvAllProducts.OptionsCustomization.AllowColumnMoving = false;
+            this.gvAllProducts.OptionsCustomization.AllowColumnResizing = false;
+            this.gvAllProducts.OptionsCustomization.AllowFilter = false;
+            this.gvAllProducts.OptionsCustomization.AllowGroup = false;
+            this.gvAllProducts.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvAllProducts.OptionsCustomization.AllowSort = false;
+            this.gvAllProducts.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gvAllProducts.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
+            this.gvAllProducts.OptionsDetail.EnableDetailToolTip = true;
+            this.gvAllProducts.OptionsFind.AlwaysVisible = true;
+            this.gvAllProducts.OptionsFind.ShowCloseButton = false;
+            this.gvAllProducts.OptionsFind.ShowFindButton = false;
+            this.gvAllProducts.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvAllProducts.OptionsView.ColumnAutoWidth = false;
+            this.gvAllProducts.OptionsView.ShowGroupPanel = false;
+            this.gvAllProducts.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gvAllProducts.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gvAllProducts.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvAllProducts_MasterRowEmpty);
+            this.gvAllProducts.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvAllProducts_MasterRowGetChildList);
+            this.gvAllProducts.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvAllProducts_MasterRowGetRelationName);
+            this.gvAllProducts.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvAllProducts_MasterRowGetRelationCount);
+            this.gvAllProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvAllProducts_FocusedRowChanged);
+            this.gvAllProducts.ColumnFilterChanged += new System.EventHandler(this.gvAllProducts_ColumnFilterChanged);
+            // 
+            // gridColumn10
+            // 
+            resources.ApplyResources(this.gridColumn10, "gridColumn10");
+            this.gridColumn10.FieldName = "producto_id";
+            this.gridColumn10.Name = "gridColumn10";
+            // 
+            // gridColumn11
+            // 
+            resources.ApplyResources(this.gridColumn11, "gridColumn11");
+            this.gridColumn11.FieldName = "nombre";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // gridColumn12
+            // 
+            resources.ApplyResources(this.gridColumn12, "gridColumn12");
+            this.gridColumn12.FieldName = "cantidad";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
+            // gridColumn22
+            // 
+            resources.ApplyResources(this.gridColumn22, "gridColumn22");
+            this.gridColumn22.FieldName = "nombre_unidad";
+            this.gridColumn22.Name = "gridColumn22";
+            // 
+            // gridColumn23
+            // 
+            resources.ApplyResources(this.gridColumn23, "gridColumn23");
+            this.gridColumn23.FieldName = "unidades";
+            this.gridColumn23.Name = "gridColumn23";
+            // 
+            // gridColumn24
+            // 
+            resources.ApplyResources(this.gridColumn24, "gridColumn24");
+            this.gridColumn24.FieldName = "precio";
+            this.gridColumn24.Name = "gridColumn24";
             // 
             // layoutControl1
             // 
@@ -127,29 +307,29 @@
             // 
             this.gcSelectedProducts.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.gcSelectedProducts, "gcSelectedProducts");
-            this.gcSelectedProducts.MainView = this.gvProducts;
+            this.gcSelectedProducts.MainView = this.gvSelectedProducts;
             this.gcSelectedProducts.Name = "gcSelectedProducts";
             this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvProducts});
+            this.gvSelectedProducts});
             // 
-            // gvProducts
+            // gvSelectedProducts
             // 
-            this.gvProducts.ActiveFilterEnabled = false;
-            this.gvProducts.Appearance.FocusedCell.BackColor = ((System.Drawing.Color)(resources.GetObject("gvProducts.Appearance.FocusedCell.BackColor")));
-            this.gvProducts.Appearance.FocusedCell.Font = ((System.Drawing.Font)(resources.GetObject("gvProducts.Appearance.FocusedCell.Font")));
-            this.gvProducts.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.gvProducts.Appearance.FocusedCell.Options.UseFont = true;
-            this.gvProducts.Appearance.FocusedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gvProducts.Appearance.FocusedRow.BackColor")));
-            this.gvProducts.Appearance.FocusedRow.Font = ((System.Drawing.Font)(resources.GetObject("gvProducts.Appearance.FocusedRow.Font")));
-            this.gvProducts.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.gvProducts.Appearance.FocusedRow.Options.UseFont = true;
-            this.gvProducts.Appearance.ViewCaption.BackColor = ((System.Drawing.Color)(resources.GetObject("gvProducts.Appearance.ViewCaption.BackColor")));
-            this.gvProducts.Appearance.ViewCaption.Font = ((System.Drawing.Font)(resources.GetObject("gvProducts.Appearance.ViewCaption.Font")));
-            this.gvProducts.Appearance.ViewCaption.ForeColor = ((System.Drawing.Color)(resources.GetObject("gvProducts.Appearance.ViewCaption.ForeColor")));
-            this.gvProducts.Appearance.ViewCaption.Options.UseBackColor = true;
-            this.gvProducts.Appearance.ViewCaption.Options.UseFont = true;
-            this.gvProducts.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.gvProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvSelectedProducts.ActiveFilterEnabled = false;
+            this.gvSelectedProducts.Appearance.FocusedCell.BackColor = ((System.Drawing.Color)(resources.GetObject("gvSelectedProducts.Appearance.FocusedCell.BackColor")));
+            this.gvSelectedProducts.Appearance.FocusedCell.Font = ((System.Drawing.Font)(resources.GetObject("gvSelectedProducts.Appearance.FocusedCell.Font")));
+            this.gvSelectedProducts.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gvSelectedProducts.Appearance.FocusedCell.Options.UseFont = true;
+            this.gvSelectedProducts.Appearance.FocusedRow.BackColor = ((System.Drawing.Color)(resources.GetObject("gvSelectedProducts.Appearance.FocusedRow.BackColor")));
+            this.gvSelectedProducts.Appearance.FocusedRow.Font = ((System.Drawing.Font)(resources.GetObject("gvSelectedProducts.Appearance.FocusedRow.Font")));
+            this.gvSelectedProducts.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gvSelectedProducts.Appearance.FocusedRow.Options.UseFont = true;
+            this.gvSelectedProducts.Appearance.ViewCaption.BackColor = ((System.Drawing.Color)(resources.GetObject("gvSelectedProducts.Appearance.ViewCaption.BackColor")));
+            this.gvSelectedProducts.Appearance.ViewCaption.Font = ((System.Drawing.Font)(resources.GetObject("gvSelectedProducts.Appearance.ViewCaption.Font")));
+            this.gvSelectedProducts.Appearance.ViewCaption.ForeColor = ((System.Drawing.Color)(resources.GetObject("gvSelectedProducts.Appearance.ViewCaption.ForeColor")));
+            this.gvSelectedProducts.Appearance.ViewCaption.Options.UseBackColor = true;
+            this.gvSelectedProducts.Appearance.ViewCaption.Options.UseFont = true;
+            this.gvSelectedProducts.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.gvSelectedProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn15,
             this.gridColumn21,
             this.gridColumn16,
@@ -157,25 +337,26 @@
             this.gridColumn20,
             this.gridColumn18,
             this.gridColumn19});
-            this.gvProducts.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gvProducts.GridControl = this.gcSelectedProducts;
-            this.gvProducts.Name = "gvProducts";
-            this.gvProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-            this.gvProducts.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.Inplace;
-            this.gvProducts.OptionsCustomization.AllowColumnMoving = false;
-            this.gvProducts.OptionsCustomization.AllowFilter = false;
-            this.gvProducts.OptionsCustomization.AllowGroup = false;
-            this.gvProducts.OptionsCustomization.AllowSort = false;
-            this.gvProducts.OptionsNavigation.AutoFocusNewRow = true;
-            this.gvProducts.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gvProducts.OptionsView.ShowGroupPanel = false;
-            this.gvProducts.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
-            this.gvProducts.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
-            this.gvProducts.OptionsView.ShowViewCaption = true;
-            this.gvProducts.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-            resources.ApplyResources(this.gvProducts, "gvProducts");
-            this.gvProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProducts_FocusedRowChanged);
-            this.gvProducts.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvProducts_CellValueChanged);
+            this.gvSelectedProducts.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
+            this.gvSelectedProducts.Name = "gvSelectedProducts";
+            this.gvSelectedProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvSelectedProducts.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.Inplace;
+            this.gvSelectedProducts.OptionsCustomization.AllowColumnMoving = false;
+            this.gvSelectedProducts.OptionsCustomization.AllowColumnResizing = false;
+            this.gvSelectedProducts.OptionsCustomization.AllowFilter = false;
+            this.gvSelectedProducts.OptionsCustomization.AllowGroup = false;
+            this.gvSelectedProducts.OptionsCustomization.AllowSort = false;
+            this.gvSelectedProducts.OptionsNavigation.AutoFocusNewRow = true;
+            this.gvSelectedProducts.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvSelectedProducts.OptionsView.ShowGroupPanel = false;
+            this.gvSelectedProducts.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gvSelectedProducts.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
+            this.gvSelectedProducts.OptionsView.ShowViewCaption = true;
+            this.gvSelectedProducts.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            resources.ApplyResources(this.gvSelectedProducts, "gvSelectedProducts");
+            this.gvSelectedProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProducts_FocusedRowChanged);
+            this.gvSelectedProducts.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvProducts_CellValueChanged);
             // 
             // gridColumn15
             // 
@@ -230,65 +411,26 @@
             // 
             // gcSearchBar
             // 
-            this.gcSearchBar.Controls.Add(this.popupContainerEdit2);
+            this.gcSearchBar.Controls.Add(this.pceSearchProduct);
             resources.ApplyResources(this.gcSearchBar, "gcSearchBar");
             this.gcSearchBar.Name = "gcSearchBar";
             // 
-            // popupContainerEdit2
+            // pceSearchProduct
             // 
-            resources.ApplyResources(this.popupContainerEdit2, "popupContainerEdit2");
-            this.popupContainerEdit2.Name = "popupContainerEdit2";
-            this.popupContainerEdit2.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("popupContainerEdit2.Properties.Appearance.Font")));
-            this.popupContainerEdit2.Properties.Appearance.Options.UseFont = true;
-            this.popupContainerEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("popupContainerEdit2.Properties.Buttons"))))});
-            this.popupContainerEdit2.Properties.PopupControl = this.popupContainerControl1;
+            resources.ApplyResources(this.pceSearchProduct, "pceSearchProduct");
+            this.pceSearchProduct.Name = "pceSearchProduct";
+            this.pceSearchProduct.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("pceSearchProduct.Properties.Appearance.Font")));
+            this.pceSearchProduct.Properties.Appearance.Options.UseFont = true;
+            this.pceSearchProduct.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pceSearchProduct.Properties.Buttons"))))});
+            this.pceSearchProduct.Properties.PopupControl = this.popupContainerControl1;
+            this.pceSearchProduct.Properties.PopupSizeable = false;
             // 
             // popupContainerControl1
             // 
             this.popupContainerControl1.Controls.Add(this.gcAllProducts);
             resources.ApplyResources(this.popupContainerControl1, "popupContainerControl1");
             this.popupContainerControl1.Name = "popupContainerControl1";
-            // 
-            // gcAllProducts
-            // 
-            this.gcAllProducts.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.gcAllProducts, "gcAllProducts");
-            this.gcAllProducts.MainView = this.gvAllProducts;
-            this.gcAllProducts.Name = "gcAllProducts";
-            this.gcAllProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvAllProducts});
-            // 
-            // gvAllProducts
-            // 
-            this.gvAllProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12});
-            this.gvAllProducts.GridControl = this.gcAllProducts;
-            this.gvAllProducts.Name = "gvAllProducts";
-            this.gvAllProducts.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvAllProducts_MasterRowEmpty);
-            this.gvAllProducts.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvAllProducts_MasterRowGetChildList);
-            this.gvAllProducts.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvAllProducts_MasterRowGetRelationName);
-            this.gvAllProducts.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvAllProducts_MasterRowGetRelationCount);
-            // 
-            // gridColumn10
-            // 
-            resources.ApplyResources(this.gridColumn10, "gridColumn10");
-            this.gridColumn10.FieldName = "producto_id";
-            this.gridColumn10.Name = "gridColumn10";
-            // 
-            // gridColumn11
-            // 
-            resources.ApplyResources(this.gridColumn11, "gridColumn11");
-            this.gridColumn11.FieldName = "nombre";
-            this.gridColumn11.Name = "gridColumn11";
-            // 
-            // gridColumn12
-            // 
-            resources.ApplyResources(this.gridColumn12, "gridColumn12");
-            this.gridColumn12.FieldName = "cantidad";
-            this.gridColumn12.Name = "gridColumn12";
             // 
             // panelControl2
             // 
@@ -326,64 +468,9 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.panelControl1.Controls.Add(this.sleProducts);
             this.panelControl1.Controls.Add(this.txtSubTotal);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
-            // 
-            // sleProducts
-            // 
-            resources.ApplyResources(this.sleProducts, "sleProducts");
-            this.sleProducts.Name = "sleProducts";
-            this.sleProducts.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sleProducts.Properties.Appearance.Font")));
-            this.sleProducts.Properties.Appearance.Options.UseFont = true;
-            this.sleProducts.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
-            this.sleProducts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("sleProducts.Properties.Buttons"))))});
-            this.sleProducts.Properties.NullText = resources.GetString("sleProducts.Properties.NullText");
-            this.sleProducts.Properties.PopupFormMinSize = new System.Drawing.Size(300, 300);
-            this.sleProducts.Properties.View = this.sleProductsView;
-            this.sleProducts.EditValueChanged += new System.EventHandler(this.sleProducts_EditValueChanged);
-            // 
-            // sleProductsView
-            // 
-            this.sleProductsView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn13,
-            this.gridColumn14});
-            this.sleProductsView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.sleProductsView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-            this.sleProductsView.Name = "sleProductsView";
-            this.sleProductsView.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
-            this.sleProductsView.OptionsDetail.SmartDetailExpandButtonMode = DevExpress.XtraGrid.Views.Grid.DetailExpandButtonMode.AlwaysEnabled;
-            this.sleProductsView.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.sleProductsView.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            this.sleProductsView.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn8
-            // 
-            resources.ApplyResources(this.gridColumn8, "gridColumn8");
-            this.gridColumn8.FieldName = "producto_id";
-            this.gridColumn8.Name = "gridColumn8";
-            // 
-            // gridColumn9
-            // 
-            resources.ApplyResources(this.gridColumn9, "gridColumn9");
-            this.gridColumn9.FieldName = "producto_nombre";
-            this.gridColumn9.Name = "gridColumn9";
-            // 
-            // gridColumn13
-            // 
-            resources.ApplyResources(this.gridColumn13, "gridColumn13");
-            this.gridColumn13.FieldName = "producto_costo_unitario";
-            this.gridColumn13.Name = "gridColumn13";
-            // 
-            // gridColumn14
-            // 
-            resources.ApplyResources(this.gridColumn14, "gridColumn14");
-            this.gridColumn14.FieldName = "cantidad_inventario";
-            this.gridColumn14.Name = "gridColumn14";
             // 
             // txtSubTotal
             // 
@@ -503,26 +590,26 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPrecioDescuento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchBar)).EndInit();
             this.gcSearchBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.popupContainerEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).EndInit();
             this.popupContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvAllProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sleProducts.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sleProductsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -558,15 +645,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.SearchLookUpEdit sleProducts;
-        private DevExpress.XtraGrid.Views.Grid.GridView sleProductsView;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.XtraGrid.GridControl gcSelectedProducts;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvProducts;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvSelectedProducts;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
@@ -576,12 +657,23 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraEditors.TextEdit txtSubTotal;
         private DevExpress.XtraEditors.PopupContainerControl popupContainerControl1;
-        private DevExpress.XtraEditors.PopupContainerEdit popupContainerEdit2;
+        private DevExpress.XtraEditors.PopupContainerEdit pceSearchProduct;
         private DevExpress.XtraGrid.GridControl gcAllProducts;
         private DevExpress.XtraGrid.Views.Grid.GridView gvAllProducts;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPrecioVenta;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPrecioDescuento;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn col_precio;
 
     }
 }

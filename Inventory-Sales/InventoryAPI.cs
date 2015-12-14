@@ -78,7 +78,7 @@ namespace Inventory_Sales
 
         public DataTable GetPricesTypes()
         {
-            var req = new RestRequest('/api/prices/types', Method.GET);
+            var req = new RestRequest("/api/prices/types", Method.GET);
 
             IRestResponse res = client.Execute(req);
             DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
