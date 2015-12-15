@@ -26,7 +26,8 @@ namespace Inventory_Sales.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=184.154.205.226;user id=teayudop_fabian;database=teayudop_bdinventario")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=184.154.205.226;user id=teayudop_fabian;database=teayudop_bdinventario;pas" +
+            "sword=Fabian123")]
         public string teayudop_bdinventarioConnectionString {
             get {
                 return ((string)(this["teayudop_bdinventarioConnectionString"]));

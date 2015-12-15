@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
@@ -50,6 +49,22 @@
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.btnSavePrint = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.txtTotal = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTax = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSubTotal = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cmbSaleStatus = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbDocumentType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbPaymentType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
             this.gvSelectedProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,15 +74,19 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcSearchBar = new DevExpress.XtraEditors.GroupControl();
+            this.gcSearchProductBar = new DevExpress.XtraEditors.GroupControl();
             this.pceSearchProduct = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
+            this.gcSearchClientBar = new DevExpress.XtraEditors.GroupControl();
+            this.sleClients = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.sleClientsView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.nbcSideBarMenu = new DevExpress.XtraNavBar.NavBarControl();
             this.nbgSales = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiCreateNewSale = new DevExpress.XtraNavBar.NavBarItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtSubTotal = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -81,7 +100,6 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioDescuento)).BeginInit();
@@ -90,26 +108,39 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSaleStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDocumentType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPaymentType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcSearchBar)).BeginInit();
-            this.gcSearchBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSearchProductBar)).BeginInit();
+            this.gcSearchProductBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).BeginInit();
             this.popupContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSearchClientBar)).BeginInit();
+            this.gcSearchClientBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sleClients.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sleClientsView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gvPrecioVenta
@@ -297,11 +328,154 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.panelControl5);
+            this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Controls.Add(this.gcSelectedProducts);
-            this.panelControl3.Controls.Add(this.gcSearchBar);
+            this.panelControl3.Controls.Add(this.gcSearchProductBar);
+            this.panelControl3.Controls.Add(this.gcSearchClientBar);
             this.panelControl3.Controls.Add(this.popupContainerControl1);
             resources.ApplyResources(this.panelControl3, "panelControl3");
             this.panelControl3.Name = "panelControl3";
+            // 
+            // panelControl5
+            // 
+            this.panelControl5.Controls.Add(this.btnSavePrint);
+            this.panelControl5.Controls.Add(this.btnSave);
+            this.panelControl5.Controls.Add(this.btnClear);
+            this.panelControl5.Controls.Add(this.btnOpen);
+            resources.ApplyResources(this.panelControl5, "panelControl5");
+            this.panelControl5.Name = "panelControl5";
+            // 
+            // btnSavePrint
+            // 
+            this.btnSavePrint.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSavePrint.Appearance.Font")));
+            this.btnSavePrint.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.btnSavePrint, "btnSavePrint");
+            this.btnSavePrint.Name = "btnSavePrint";
+            this.btnSavePrint.Click += new System.EventHandler(this.btnSavePrint_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnSave.Appearance.Font")));
+            this.btnSave.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnClear.Appearance.Font")));
+            this.btnClear.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("btnOpen.Appearance.Font")));
+            this.btnOpen.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.btnOpen, "btnOpen");
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.txtTotal);
+            this.panelControl4.Controls.Add(this.labelControl3);
+            this.panelControl4.Controls.Add(this.txtTax);
+            this.panelControl4.Controls.Add(this.labelControl2);
+            this.panelControl4.Controls.Add(this.labelControl1);
+            this.panelControl4.Controls.Add(this.txtSubTotal);
+            this.panelControl4.Controls.Add(this.groupControl1);
+            resources.ApplyResources(this.panelControl4, "panelControl4");
+            this.panelControl4.Name = "panelControl4";
+            // 
+            // txtTotal
+            // 
+            resources.ApplyResources(this.txtTotal, "txtTotal");
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtTotal.Properties.Appearance.Font")));
+            this.txtTotal.Properties.Appearance.Options.UseFont = true;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl3.Appearance.Font")));
+            resources.ApplyResources(this.labelControl3, "labelControl3");
+            this.labelControl3.Name = "labelControl3";
+            // 
+            // txtTax
+            // 
+            resources.ApplyResources(this.txtTax, "txtTax");
+            this.txtTax.Name = "txtTax";
+            this.txtTax.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtTax.Properties.Appearance.Font")));
+            this.txtTax.Properties.Appearance.Options.UseFont = true;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl2.Appearance.Font")));
+            resources.ApplyResources(this.labelControl2, "labelControl2");
+            this.labelControl2.Name = "labelControl2";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            resources.ApplyResources(this.labelControl1, "labelControl1");
+            this.labelControl1.Name = "labelControl1";
+            // 
+            // txtSubTotal
+            // 
+            resources.ApplyResources(this.txtSubTotal, "txtSubTotal");
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtSubTotal.Properties.Appearance.Font")));
+            this.txtSubTotal.Properties.Appearance.Options.UseFont = true;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.cmbSaleStatus);
+            this.groupControl1.Controls.Add(this.cmbDocumentType);
+            this.groupControl1.Controls.Add(this.cmbPaymentType);
+            resources.ApplyResources(this.groupControl1, "groupControl1");
+            this.groupControl1.Name = "groupControl1";
+            // 
+            // cmbSaleStatus
+            // 
+            resources.ApplyResources(this.cmbSaleStatus, "cmbSaleStatus");
+            this.cmbSaleStatus.Name = "cmbSaleStatus";
+            this.cmbSaleStatus.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbSaleStatus.Properties.Appearance.Font")));
+            this.cmbSaleStatus.Properties.Appearance.Options.UseFont = true;
+            this.cmbSaleStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbSaleStatus.Properties.Buttons"))))});
+            this.cmbSaleStatus.Properties.Items.AddRange(new object[] {
+            resources.GetString("cmbSaleStatus.Properties.Items"),
+            resources.GetString("cmbSaleStatus.Properties.Items1")});
+            this.cmbSaleStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
+            // cmbDocumentType
+            // 
+            resources.ApplyResources(this.cmbDocumentType, "cmbDocumentType");
+            this.cmbDocumentType.Name = "cmbDocumentType";
+            this.cmbDocumentType.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbDocumentType.Properties.Appearance.Font")));
+            this.cmbDocumentType.Properties.Appearance.Options.UseFont = true;
+            this.cmbDocumentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbDocumentType.Properties.Buttons"))))});
+            this.cmbDocumentType.Properties.Items.AddRange(new object[] {
+            resources.GetString("cmbDocumentType.Properties.Items"),
+            resources.GetString("cmbDocumentType.Properties.Items1"),
+            resources.GetString("cmbDocumentType.Properties.Items2")});
+            this.cmbDocumentType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
+            // cmbPaymentType
+            // 
+            resources.ApplyResources(this.cmbPaymentType, "cmbPaymentType");
+            this.cmbPaymentType.Name = "cmbPaymentType";
+            this.cmbPaymentType.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbPaymentType.Properties.Appearance.Font")));
+            this.cmbPaymentType.Properties.Appearance.Options.UseFont = true;
+            this.cmbPaymentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbPaymentType.Properties.Buttons"))))});
+            this.cmbPaymentType.Properties.Items.AddRange(new object[] {
+            resources.GetString("cmbPaymentType.Properties.Items"),
+            resources.GetString("cmbPaymentType.Properties.Items1")});
+            this.cmbPaymentType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // gcSelectedProducts
             // 
@@ -409,11 +583,11 @@
             this.gridColumn19.UnboundExpression = "[cantidad] * [precio]";
             this.gridColumn19.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             // 
-            // gcSearchBar
+            // gcSearchProductBar
             // 
-            this.gcSearchBar.Controls.Add(this.pceSearchProduct);
-            resources.ApplyResources(this.gcSearchBar, "gcSearchBar");
-            this.gcSearchBar.Name = "gcSearchBar";
+            this.gcSearchProductBar.Controls.Add(this.pceSearchProduct);
+            resources.ApplyResources(this.gcSearchProductBar, "gcSearchProductBar");
+            this.gcSearchProductBar.Name = "gcSearchProductBar";
             // 
             // pceSearchProduct
             // 
@@ -431,6 +605,56 @@
             this.popupContainerControl1.Controls.Add(this.gcAllProducts);
             resources.ApplyResources(this.popupContainerControl1, "popupContainerControl1");
             this.popupContainerControl1.Name = "popupContainerControl1";
+            // 
+            // gcSearchClientBar
+            // 
+            this.gcSearchClientBar.Controls.Add(this.sleClients);
+            resources.ApplyResources(this.gcSearchClientBar, "gcSearchClientBar");
+            this.gcSearchClientBar.Name = "gcSearchClientBar";
+            // 
+            // sleClients
+            // 
+            resources.ApplyResources(this.sleClients, "sleClients");
+            this.sleClients.Name = "sleClients";
+            this.sleClients.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("sleClients.Properties.Appearance.Font")));
+            this.sleClients.Properties.Appearance.Options.UseFont = true;
+            this.sleClients.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("sleClients.Properties.Buttons"))))});
+            this.sleClients.Properties.NullText = resources.GetString("sleClients.Properties.NullText");
+            this.sleClients.Properties.PopupSizeable = false;
+            this.sleClients.Properties.View = this.sleClientsView;
+            this.sleClients.EditValueChanged += new System.EventHandler(this.sleClients_EditValueChanged);
+            // 
+            // sleClientsView
+            // 
+            this.sleClientsView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9});
+            this.sleClientsView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.sleClientsView.Name = "sleClientsView";
+            this.sleClientsView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.sleClientsView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.sleClientsView.OptionsBehavior.AllowFixedGroups = DevExpress.Utils.DefaultBoolean.False;
+            this.sleClientsView.OptionsBehavior.Editable = false;
+            this.sleClientsView.OptionsCustomization.AllowColumnMoving = false;
+            this.sleClientsView.OptionsCustomization.AllowFilter = false;
+            this.sleClientsView.OptionsCustomization.AllowGroup = false;
+            this.sleClientsView.OptionsCustomization.AllowQuickHideColumns = false;
+            this.sleClientsView.OptionsCustomization.AllowSort = false;
+            this.sleClientsView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.sleClientsView.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn8
+            // 
+            resources.ApplyResources(this.gridColumn8, "gridColumn8");
+            this.gridColumn8.FieldName = "id_cliente";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            resources.ApplyResources(this.gridColumn9, "gridColumn9");
+            this.gridColumn9.FieldName = "razon_social";
+            this.gridColumn9.Name = "gridColumn9";
             // 
             // panelControl2
             // 
@@ -468,14 +692,8 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.panelControl1.Controls.Add(this.txtSubTotal);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
-            // 
-            // txtSubTotal
-            // 
-            resources.ApplyResources(this.txtSubTotal, "txtSubTotal");
-            this.txtSubTotal.Name = "txtSubTotal";
             // 
             // layoutControlGroup1
             // 
@@ -598,26 +816,40 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSaleStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDocumentType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPaymentType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcSearchBar)).EndInit();
-            this.gcSearchBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcSearchProductBar)).EndInit();
+            this.gcSearchProductBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupContainerControl1)).EndInit();
             this.popupContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcSearchClientBar)).EndInit();
+            this.gcSearchClientBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sleClients.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sleClientsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,7 +866,7 @@
         private DevExpress.XtraNavBar.NavBarControl nbcSideBarMenu;
         private DevExpress.XtraNavBar.NavBarGroup nbgSales;
         private DevExpress.XtraNavBar.NavBarItem nbiCreateNewSale;
-        private DevExpress.XtraEditors.GroupControl gcSearchBar;
+        private DevExpress.XtraEditors.GroupControl gcSearchClientBar;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator2;
@@ -645,7 +877,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.XtraGrid.GridControl gcSelectedProducts;
         private DevExpress.XtraGrid.Views.Grid.GridView gvSelectedProducts;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
@@ -674,6 +905,26 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
         private DevExpress.XtraGrid.Columns.GridColumn col_precio;
+        private DevExpress.XtraEditors.GroupControl gcSearchProductBar;
+        private DevExpress.XtraEditors.SearchLookUpEdit sleClients;
+        private DevExpress.XtraGrid.Views.Grid.GridView sleClientsView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbSaleStatus;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbDocumentType;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbPaymentType;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.SimpleButton btnSavePrint;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
+        private DevExpress.XtraEditors.SimpleButton btnOpen;
+        private DevExpress.XtraEditors.TextEdit txtTax;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtTotal;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
 
     }
 }

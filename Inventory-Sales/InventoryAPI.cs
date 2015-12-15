@@ -85,5 +85,38 @@ namespace Inventory_Sales
 
             return ds.Tables["prices_types"];
         }
+
+        public DataTable GetClients()
+        {
+            var req = new RestRequest("/api/clients", Method.GET);
+
+            IRestResponse res = client.Execute(req);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["clients"];
+        }
+
+        public DataTable GetDocumentSale(string document_type_name)
+        {
+            List<Parameter> plist = new List<Parameter>();
+            Parameter p = new Parameter();
+            p.Name = "document_type";
+            p.Value = document_type_name;
+            p.Type = ParameterType.QueryString;
+            plist.Add(p);
+
+
+            IRestResponse res = MakeHTTPRequest("/api/document-sale", Method.GET, plist);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["document_sale"];
+        }
+
+        private IRestResponse MakeHTTPRequest(string uri, Method method, List<Parameter> parameters)
+        {
+            var request = new RestRequest(uri, method);
+            if (parameters != null)
+                request.Parameters.AddRange(parameters);
+
+            return client.Execute(request);
+        }
     }
 }

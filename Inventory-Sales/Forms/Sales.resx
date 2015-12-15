@@ -220,7 +220,7 @@
     <value>224</value>
   </data>
   <data name="gcAllProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>496, 253</value>
+    <value>539, 328</value>
   </data>
   <data name="gcAllProducts.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -267,6 +267,445 @@
   <data name="gridColumn24.VisibleIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="btnSavePrint.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="btnSavePrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 7</value>
+  </data>
+  <data name="btnSavePrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 37</value>
+  </data>
+  <data name="btnSavePrint.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnSavePrint.Text" xml:space="preserve">
+    <value>GUARDAR E IMP.</value>
+  </data>
+  <data name="&gt;&gt;btnSavePrint.Name" xml:space="preserve">
+    <value>btnSavePrint</value>
+  </data>
+  <data name="&gt;&gt;btnSavePrint.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSavePrint.Parent" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;btnSavePrint.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSave.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 6</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 37</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>GUARDAR</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnClear.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 7</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 37</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>LIMPIAR</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnOpen.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="btnOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 7</value>
+  </data>
+  <data name="btnOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 37</value>
+  </data>
+  <data name="btnOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnOpen.Text" xml:space="preserve">
+    <value>ABRIR</value>
+  </data>
+  <data name="&gt;&gt;btnOpen.Name" xml:space="preserve">
+    <value>btnOpen</value>
+  </data>
+  <data name="&gt;&gt;btnOpen.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnOpen.Parent" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;btnOpen.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelControl5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 555</value>
+  </data>
+  <data name="panelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 50</value>
+  </data>
+  <data name="panelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.Name" xml:space="preserve">
+    <value>panelControl5</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.Parent" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;panelControl5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 94</value>
+  </data>
+  <data name="txtTotal.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="txtTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="txtTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Name" xml:space="preserve">
+    <value>txtTotal</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;txtTotal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelControl3.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 96</value>
+  </data>
+  <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 18</value>
+  </data>
+  <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="labelControl3.Text" xml:space="preserve">
+    <value>TOTAL A PAGAR</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Name" xml:space="preserve">
+    <value>labelControl3</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtTax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 61</value>
+  </data>
+  <data name="txtTax.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="txtTax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="txtTax.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txtTax.Name" xml:space="preserve">
+    <value>txtTax</value>
+  </data>
+  <data name="&gt;&gt;txtTax.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtTax.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;txtTax.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelControl2.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 61</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 18</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>IMPUESTOS</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelControl1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 21</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 18</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>TOTAL PARCIAL</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 18</value>
+  </data>
+  <data name="txtSubTotal.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="txtSubTotal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="txtSubTotal.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtSubTotal.Name" xml:space="preserve">
+    <value>txtSubTotal</value>
+  </data>
+  <data name="&gt;&gt;txtSubTotal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtSubTotal.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;txtSubTotal.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmbSaleStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 86</value>
+  </data>
+  <data name="cmbSaleStatus.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v14.1" name="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmbSaleStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+    <value>Combo</value>
+  </data>
+  <data name="cmbSaleStatus.Properties.Items" xml:space="preserve">
+    <value>COMPLETADO</value>
+  </data>
+  <data name="cmbSaleStatus.Properties.Items1" xml:space="preserve">
+    <value>EN ESPERA</value>
+  </data>
+  <data name="cmbSaleStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 24</value>
+  </data>
+  <data name="cmbSaleStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbSaleStatus.Name" xml:space="preserve">
+    <value>cmbSaleStatus</value>
+  </data>
+  <data name="&gt;&gt;cmbSaleStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbSaleStatus.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbSaleStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbDocumentType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 56</value>
+  </data>
+  <data name="cmbDocumentType.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="cmbDocumentType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+    <value>Combo</value>
+  </data>
+  <data name="cmbDocumentType.Properties.Items" xml:space="preserve">
+    <value>BOLETA DE VENTA</value>
+  </data>
+  <data name="cmbDocumentType.Properties.Items1" xml:space="preserve">
+    <value>NOTA DE VENTA</value>
+  </data>
+  <data name="cmbDocumentType.Properties.Items2" xml:space="preserve">
+    <value>FACTURA</value>
+  </data>
+  <data name="cmbDocumentType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 24</value>
+  </data>
+  <data name="cmbDocumentType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbDocumentType.Name" xml:space="preserve">
+    <value>cmbDocumentType</value>
+  </data>
+  <data name="&gt;&gt;cmbDocumentType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbDocumentType.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbDocumentType.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbPaymentType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 26</value>
+  </data>
+  <data name="cmbPaymentType.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="cmbPaymentType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+    <value>Combo</value>
+  </data>
+  <data name="cmbPaymentType.Properties.Items" xml:space="preserve">
+    <value>CONTADO</value>
+  </data>
+  <data name="cmbPaymentType.Properties.Items1" xml:space="preserve">
+    <value>CREDITO</value>
+  </data>
+  <data name="cmbPaymentType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 24</value>
+  </data>
+  <data name="cmbPaymentType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbPaymentType.Name" xml:space="preserve">
+    <value>cmbPaymentType</value>
+  </data>
+  <data name="&gt;&gt;cmbPaymentType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cmbPaymentType.Parent" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;cmbPaymentType.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="groupControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="groupControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 165</value>
+  </data>
+  <data name="groupControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupControl1.Text" xml:space="preserve">
+    <value>CARACTERISTICAS</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Name" xml:space="preserve">
+    <value>groupControl1</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.Parent" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;groupControl1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panelControl4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 355</value>
+  </data>
+  <data name="panelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 169</value>
+  </data>
+  <data name="panelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.Name" xml:space="preserve">
+    <value>panelControl4</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.Parent" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;panelControl4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="gcSelectedProducts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -274,7 +713,7 @@
     <value>Tahoma, 12pt</value>
   </data>
   <data name="gcSelectedProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 73</value>
+    <value>2, 110</value>
   </data>
   <data name="gvSelectedProducts.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Red</value>
@@ -300,6 +739,12 @@
   <data name="gridColumn15.Caption" xml:space="preserve">
     <value>ID</value>
   </data>
+  <data name="gridColumn15.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn15.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="gridColumn21.Caption" xml:space="preserve">
     <value>#</value>
   </data>
@@ -307,7 +752,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn21.VisibleIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="gridColumn21.Width" type="System.Int32, mscorlib">
     <value>37</value>
@@ -319,7 +764,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn16.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="gridColumn16.Width" type="System.Int32, mscorlib">
     <value>302</value>
@@ -331,7 +776,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn17.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="gridColumn17.Width" type="System.Int32, mscorlib">
     <value>153</value>
@@ -343,7 +788,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn20.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gridColumn20.Width" type="System.Int32, mscorlib">
     <value>80</value>
@@ -355,7 +800,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn18.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="gridColumn18.Width" type="System.Int32, mscorlib">
     <value>88</value>
@@ -367,7 +812,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn19.VisibleIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="gridColumn19.Width" type="System.Int32, mscorlib">
     <value>107</value>
@@ -376,7 +821,7 @@
     <value>Productos Seleccionados</value>
   </data>
   <data name="gcSelectedProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 275</value>
+    <value>593, 245</value>
   </data>
   <data name="gcSelectedProducts.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -391,23 +836,22 @@
     <value>panelControl3</value>
   </data>
   <data name="&gt;&gt;gcSelectedProducts.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="pceSearchProduct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 31</value>
+    <value>5, 24</value>
   </data>
   <data name="pceSearchProduct.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
-  <assembly alias="DevExpress.Utils.v14.1" name="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="pceSearchProduct.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
     <value>Combo</value>
   </data>
   <data name="popupContainerControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 79</value>
+    <value>5, 114</value>
   </data>
   <data name="popupContainerControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>496, 253</value>
+    <value>539, 328</value>
   </data>
   <data name="popupContainerControl1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -422,7 +866,7 @@
     <value>panelControl3</value>
   </data>
   <data name="&gt;&gt;popupContainerControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="pceSearchProduct.Size" type="System.Drawing.Size, System.Drawing">
     <value>409, 24</value>
@@ -437,37 +881,121 @@
     <value>DevExpress.XtraEditors.PopupContainerEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;pceSearchProduct.Parent" xml:space="preserve">
-    <value>gcSearchBar</value>
+    <value>gcSearchProductBar</value>
   </data>
   <data name="&gt;&gt;pceSearchProduct.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="gcSearchBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="gcSearchProductBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="gcSearchBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+  <data name="gcSearchProductBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 55</value>
   </data>
-  <data name="gcSearchBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 71</value>
+  <data name="gcSearchProductBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 55</value>
   </data>
-  <data name="gcSearchBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="gcSearchProductBar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="gcSearchBar.Text" xml:space="preserve">
+  <data name="gcSearchProductBar.Text" xml:space="preserve">
     <value>Buscar producto</value>
   </data>
-  <data name="&gt;&gt;gcSearchBar.Name" xml:space="preserve">
-    <value>gcSearchBar</value>
+  <data name="&gt;&gt;gcSearchProductBar.Name" xml:space="preserve">
+    <value>gcSearchProductBar</value>
   </data>
-  <data name="&gt;&gt;gcSearchBar.Type" xml:space="preserve">
+  <data name="&gt;&gt;gcSearchProductBar.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;gcSearchBar.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gcSearchProductBar.Parent" xml:space="preserve">
     <value>panelControl3</value>
   </data>
-  <data name="&gt;&gt;gcSearchBar.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gcSearchProductBar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="sleClients.EditValue" xml:space="preserve">
+    <value>[EditValue is nu</value>
+  </data>
+  <data name="sleClients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 23</value>
+  </data>
+  <data name="sleClients.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="sleClients.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+    <value>Combo</value>
+  </data>
+  <data name="sleClients.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn8.Caption" xml:space="preserve">
+    <value>CODIGO</value>
+  </data>
+  <data name="gridColumn8.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn8.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn8.Width" type="System.Int32, mscorlib">
+    <value>173</value>
+  </data>
+  <data name="gridColumn9.Caption" xml:space="preserve">
+    <value>NOMBRE</value>
+  </data>
+  <data name="gridColumn9.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn9.VisibleIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="gridColumn9.Width" type="System.Int32, mscorlib">
+    <value>848</value>
+  </data>
+  <data name="sleClients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 24</value>
+  </data>
+  <data name="sleClients.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sleClients.Name" xml:space="preserve">
+    <value>sleClients</value>
+  </data>
+  <data name="&gt;&gt;sleClients.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SearchLookUpEdit, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;sleClients.Parent" xml:space="preserve">
+    <value>gcSearchClientBar</value>
+  </data>
+  <data name="&gt;&gt;sleClients.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gcSearchClientBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="gcSearchClientBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="gcSearchClientBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 53</value>
+  </data>
+  <data name="gcSearchClientBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gcSearchClientBar.Text" xml:space="preserve">
+    <value>Buscar cliente</value>
+  </data>
+  <data name="&gt;&gt;gcSearchClientBar.Name" xml:space="preserve">
+    <value>gcSearchClientBar</value>
+  </data>
+  <data name="&gt;&gt;gcSearchClientBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.GroupControl, DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gcSearchClientBar.Parent" xml:space="preserve">
+    <value>panelControl3</value>
+  </data>
+  <data name="&gt;&gt;gcSearchClientBar.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="panelControl3.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 12</value>
@@ -546,27 +1074,6 @@
   </data>
   <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 347</value>
-  </data>
-  <data name="txtSubTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txtSubTotal.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;txtSubTotal.Name" xml:space="preserve">
-    <value>txtSubTotal</value>
-  </data>
-  <data name="&gt;&gt;txtSubTotal.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;txtSubTotal.Parent" xml:space="preserve">
-    <value>panelControl1</value>
-  </data>
-  <data name="&gt;&gt;txtSubTotal.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>775, 12</value>
@@ -709,9 +1216,6 @@
   <data name="gridColumn7.VisibleIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -868,6 +1372,24 @@
   <data name="&gt;&gt;gridColumn19.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;sleClientsView.Name" xml:space="preserve">
+    <value>sleClientsView</value>
+  </data>
+  <data name="&gt;&gt;sleClientsView.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn8.Name" xml:space="preserve">
+    <value>gridColumn8</value>
+  </data>
+  <data name="&gt;&gt;gridColumn8.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn9.Name" xml:space="preserve">
+    <value>gridColumn9</value>
+  </data>
+  <data name="&gt;&gt;gridColumn9.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;nbgSales.Name" xml:space="preserve">
     <value>nbgSales</value>
   </data>
@@ -957,12 +1479,6 @@
   </data>
   <data name="&gt;&gt;gridColumn7.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;bindingSource1.Name" xml:space="preserve">
-    <value>bindingSource1</value>
-  </data>
-  <data name="&gt;&gt;bindingSource1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Sales</value>
