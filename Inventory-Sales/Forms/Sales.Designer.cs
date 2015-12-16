@@ -35,15 +35,20 @@
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcAllProducts = new DevExpress.XtraGrid.GridControl();
             this.gvPrecioDescuento = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_precio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvAllProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,6 +79,9 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcSearchProductBar = new DevExpress.XtraEditors.GroupControl();
             this.pceSearchProduct = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
@@ -148,7 +156,9 @@
             this.gvPrecioVenta.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn25,
             this.gridColumn26,
-            this.gridColumn27});
+            this.gridColumn27,
+            this.gridColumn31,
+            this.gridColumn32});
             this.gvPrecioVenta.GridControl = this.gcAllProducts;
             this.gvPrecioVenta.Name = "gvPrecioVenta";
             this.gvPrecioVenta.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -185,6 +195,18 @@
             this.gridColumn27.FieldName = "precio";
             this.gridColumn27.Name = "gridColumn27";
             // 
+            // gridColumn31
+            // 
+            resources.ApplyResources(this.gridColumn31, "gridColumn31");
+            this.gridColumn31.FieldName = "id_unidad";
+            this.gridColumn31.Name = "gridColumn31";
+            // 
+            // gridColumn32
+            // 
+            resources.ApplyResources(this.gridColumn32, "gridColumn32");
+            this.gridColumn32.FieldName = "id_precio";
+            this.gridColumn32.Name = "gridColumn32";
+            // 
             // gcAllProducts
             // 
             this.gcAllProducts.Cursor = System.Windows.Forms.Cursors.Default;
@@ -208,7 +230,9 @@
             this.gvPrecioDescuento.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn28,
             this.gridColumn29,
-            this.col_precio});
+            this.col_precio,
+            this.gridColumn33,
+            this.gridColumn34});
             this.gvPrecioDescuento.GridControl = this.gcAllProducts;
             this.gvPrecioDescuento.Name = "gvPrecioDescuento";
             this.gvPrecioDescuento.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -244,12 +268,25 @@
             this.col_precio.FieldName = "precio";
             this.col_precio.Name = "col_precio";
             // 
+            // gridColumn33
+            // 
+            resources.ApplyResources(this.gridColumn33, "gridColumn33");
+            this.gridColumn33.FieldName = "id_unidad";
+            this.gridColumn33.Name = "gridColumn33";
+            // 
+            // gridColumn34
+            // 
+            resources.ApplyResources(this.gridColumn34, "gridColumn34");
+            this.gridColumn34.FieldName = "id_precio";
+            this.gridColumn34.Name = "gridColumn34";
+            // 
             // gvAllProducts
             // 
             this.gvAllProducts.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn10,
             this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn35});
             this.gvAllProducts.GridControl = this.gcAllProducts;
             this.gvAllProducts.Name = "gvAllProducts";
             this.gvAllProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -297,6 +334,12 @@
             resources.ApplyResources(this.gridColumn12, "gridColumn12");
             this.gridColumn12.FieldName = "cantidad";
             this.gridColumn12.Name = "gridColumn12";
+            // 
+            // gridColumn35
+            // 
+            resources.ApplyResources(this.gridColumn35, "gridColumn35");
+            this.gridColumn35.FieldName = "producto_costo_unitario";
+            this.gridColumn35.Name = "gridColumn35";
             // 
             // gridColumn22
             // 
@@ -510,7 +553,10 @@
             this.gridColumn17,
             this.gridColumn20,
             this.gridColumn18,
-            this.gridColumn19});
+            this.gridColumn19,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn30});
             this.gvSelectedProducts.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
             this.gvSelectedProducts.Name = "gvSelectedProducts";
@@ -529,8 +575,8 @@
             this.gvSelectedProducts.OptionsView.ShowViewCaption = true;
             this.gvSelectedProducts.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             resources.ApplyResources(this.gvSelectedProducts, "gvSelectedProducts");
-            this.gvSelectedProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvProducts_FocusedRowChanged);
-            this.gvSelectedProducts.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvProducts_CellValueChanged);
+            this.gvSelectedProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvSelectedProducts_FocusedRowChanged);
+            this.gvSelectedProducts.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvSelectedProducts_CellValueChanged);
             // 
             // gridColumn15
             // 
@@ -582,6 +628,24 @@
             this.gridColumn19.OptionsColumn.ReadOnly = true;
             this.gridColumn19.UnboundExpression = "[cantidad] * [precio]";
             this.gridColumn19.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+            // 
+            // gridColumn13
+            // 
+            resources.ApplyResources(this.gridColumn13, "gridColumn13");
+            this.gridColumn13.FieldName = "id_unidad";
+            this.gridColumn13.Name = "gridColumn13";
+            // 
+            // gridColumn14
+            // 
+            resources.ApplyResources(this.gridColumn14, "gridColumn14");
+            this.gridColumn14.FieldName = "id_precio";
+            this.gridColumn14.Name = "gridColumn14";
+            // 
+            // gridColumn30
+            // 
+            resources.ApplyResources(this.gridColumn30, "gridColumn30");
+            this.gridColumn30.FieldName = "producto_costo_unitario";
+            this.gridColumn30.Name = "gridColumn30";
             // 
             // gcSearchProductBar
             // 
@@ -925,6 +989,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtTotal;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
 
     }
 }

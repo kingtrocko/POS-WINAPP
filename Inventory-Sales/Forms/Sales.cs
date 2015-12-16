@@ -60,7 +60,9 @@ namespace Inventory_Sales.Forms
             dtSelectedProducts.Columns.Add("unidad_medida", typeof(string));
             dtSelectedProducts.Columns.Add("cantidad", typeof(int));
             dtSelectedProducts.Columns.Add("precio", typeof(decimal));
-            //unidad_id, price_id
+            dtSelectedProducts.Columns.Add("id_unidad", typeof(int));
+            dtSelectedProducts.Columns.Add("id_precio", typeof(int));
+            dtSelectedProducts.Columns.Add("producto_costo_unitario", typeof(decimal));
 
             return dtSelectedProducts;
         }
@@ -76,16 +78,16 @@ namespace Inventory_Sales.Forms
 
         }
 
-        private void gvProducts_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void gvSelectedProducts_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             txtSubTotal.Text = getSubtotal().ToString();
-            
         }
 
-        private void gvProducts_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        private void gvSelectedProducts_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             txtSubTotal.Text = getSubtotal().ToString();
         }
+
 
         private Decimal getSubtotal()
         {
@@ -159,6 +161,9 @@ namespace Inventory_Sales.Forms
                 row["unidad_medida"] = nombre_unidad;
                 row["cantidad"] = 1;
                 row["precio"] = precio;
+                row["id_unidad"] = selectedPriceRow.Row["id_unidad"];
+                row["id_precio"] = selectedPriceRow.Row["id_precio"];
+                row["producto_costo_unitario"] = selectedProductRow.Row["producto_costo_unitario"];
 
                 dtSelectedProducts.Rows.Add(row);
 
@@ -215,8 +220,6 @@ namespace Inventory_Sales.Forms
         private void btnSavePrint_Click(object sender, EventArgs e)
         {
 
-        }
-
-       
+        }       
     }
 }
