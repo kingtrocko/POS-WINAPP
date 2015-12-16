@@ -415,13 +415,13 @@
     <value>0</value>
   </data>
   <data name="txtTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 94</value>
+    <value>458, 75</value>
   </data>
   <data name="txtTotal.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
   <data name="txtTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
+    <value>113, 24</value>
   </data>
   <data name="txtTotal.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -442,7 +442,7 @@
     <value>Tahoma, 11pt</value>
   </data>
   <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 96</value>
+    <value>340, 77</value>
   </data>
   <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 18</value>
@@ -466,13 +466,13 @@
     <value>1</value>
   </data>
   <data name="txtTax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 61</value>
+    <value>458, 42</value>
   </data>
   <data name="txtTax.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
   <data name="txtTax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
+    <value>113, 24</value>
   </data>
   <data name="txtTax.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -493,7 +493,7 @@
     <value>Tahoma, 11pt</value>
   </data>
   <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 61</value>
+    <value>371, 42</value>
   </data>
   <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 18</value>
@@ -520,7 +520,7 @@
     <value>Tahoma, 11pt</value>
   </data>
   <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 21</value>
+    <value>343, 12</value>
   </data>
   <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 18</value>
@@ -544,13 +544,13 @@
     <value>4</value>
   </data>
   <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 18</value>
+    <value>458, 9</value>
   </data>
   <data name="txtSubTotal.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
   <data name="txtSubTotal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
+    <value>113, 24</value>
   </data>
   <data name="txtSubTotal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -567,107 +567,147 @@
   <data name="&gt;&gt;txtSubTotal.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="cmbSaleStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 86</value>
+  <data name="lueSaleStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
-  <data name="cmbSaleStatus.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lueSaleStatus.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
   <assembly alias="DevExpress.Utils.v14.1" name="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="cmbSaleStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+  <data name="lueSaleStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
     <value>Combo</value>
   </data>
-  <data name="cmbSaleStatus.Properties.Items" xml:space="preserve">
-    <value>COMPLETADO</value>
+  <data name="lueSaleStatus.Properties.Columns" xml:space="preserve">
+    <value>id</value>
   </data>
-  <data name="cmbSaleStatus.Properties.Items1" xml:space="preserve">
-    <value>EN ESPERA</value>
+  <data name="lueSaleStatus.Properties.Columns1" xml:space="preserve">
+    <value>ID</value>
   </data>
-  <data name="cmbSaleStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 24</value>
+  <data name="lueSaleStatus.Properties.Columns2" xml:space="preserve">
+    <value>status</value>
   </data>
-  <data name="cmbSaleStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="lueSaleStatus.Properties.Columns3" xml:space="preserve">
+    <value>Estatus Venta</value>
   </data>
-  <data name="&gt;&gt;cmbSaleStatus.Name" xml:space="preserve">
-    <value>cmbSaleStatus</value>
+  <data name="lueSaleStatus.Properties.NullText" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;cmbSaleStatus.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="lueSaleStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 24</value>
   </data>
-  <data name="&gt;&gt;cmbSaleStatus.Parent" xml:space="preserve">
+  <data name="lueSaleStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lueSaleStatus.Name" xml:space="preserve">
+    <value>lueSaleStatus</value>
+  </data>
+  <data name="&gt;&gt;lueSaleStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lueSaleStatus.Parent" xml:space="preserve">
     <value>groupControl1</value>
   </data>
-  <data name="&gt;&gt;cmbSaleStatus.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lueSaleStatus.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="cmbDocumentType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 56</value>
+  <data name="luePaymentTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
   </data>
-  <data name="cmbDocumentType.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="luePaymentTypes.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
-  <data name="cmbDocumentType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+  <data name="luePaymentTypes.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
     <value>Combo</value>
   </data>
-  <data name="cmbDocumentType.Properties.Items" xml:space="preserve">
-    <value>BOLETA DE VENTA</value>
+  <data name="luePaymentTypes.Properties.Columns" xml:space="preserve">
+    <value>id_condiciones</value>
   </data>
-  <data name="cmbDocumentType.Properties.Items1" xml:space="preserve">
-    <value>NOTA DE VENTA</value>
+  <data name="luePaymentTypes.Properties.Columns1" xml:space="preserve">
+    <value>ID</value>
   </data>
-  <data name="cmbDocumentType.Properties.Items2" xml:space="preserve">
-    <value>FACTURA</value>
+  <data name="luePaymentTypes.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
-  <data name="cmbDocumentType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 24</value>
+  <assembly alias="DevExpress.Data.v14.1" name="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="luePaymentTypes.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.1">
+    <value>None</value>
   </data>
-  <data name="cmbDocumentType.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="luePaymentTypes.Properties.Columns4" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;cmbDocumentType.Name" xml:space="preserve">
-    <value>cmbDocumentType</value>
+  <data name="luePaymentTypes.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;cmbDocumentType.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="luePaymentTypes.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v14.1">
+    <value>Default</value>
   </data>
-  <data name="&gt;&gt;cmbDocumentType.Parent" xml:space="preserve">
+  <data name="luePaymentTypes.Properties.Columns7" xml:space="preserve">
+    <value>nombre_condiciones</value>
+  </data>
+  <data name="luePaymentTypes.Properties.Columns8" xml:space="preserve">
+    <value>Tipo de Pago</value>
+  </data>
+  <data name="luePaymentTypes.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="luePaymentTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 24</value>
+  </data>
+  <data name="luePaymentTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;luePaymentTypes.Name" xml:space="preserve">
+    <value>luePaymentTypes</value>
+  </data>
+  <data name="&gt;&gt;luePaymentTypes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;luePaymentTypes.Parent" xml:space="preserve">
     <value>groupControl1</value>
   </data>
-  <data name="&gt;&gt;cmbDocumentType.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;luePaymentTypes.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cmbPaymentType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 26</value>
+  <data name="lueDocumentTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 54</value>
   </data>
-  <data name="cmbPaymentType.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lueDocumentTypes.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
   </data>
-  <data name="cmbPaymentType.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
+  <data name="lueDocumentTypes.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v14.1">
     <value>Combo</value>
   </data>
-  <data name="cmbPaymentType.Properties.Items" xml:space="preserve">
-    <value>CONTADO</value>
+  <data name="lueDocumentTypes.Properties.Columns" xml:space="preserve">
+    <value>id</value>
   </data>
-  <data name="cmbPaymentType.Properties.Items1" xml:space="preserve">
-    <value>CREDITO</value>
+  <data name="lueDocumentTypes.Properties.Columns1" xml:space="preserve">
+    <value>ID</value>
   </data>
-  <data name="cmbPaymentType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 24</value>
+  <data name="lueDocumentTypes.Properties.Columns2" xml:space="preserve">
+    <value>document_type</value>
   </data>
-  <data name="cmbPaymentType.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="lueDocumentTypes.Properties.Columns3" xml:space="preserve">
+    <value>Tipo Documento</value>
   </data>
-  <data name="&gt;&gt;cmbPaymentType.Name" xml:space="preserve">
-    <value>cmbPaymentType</value>
+  <data name="lueDocumentTypes.Properties.NullText" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;cmbPaymentType.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="lueDocumentTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 24</value>
   </data>
-  <data name="&gt;&gt;cmbPaymentType.Parent" xml:space="preserve">
+  <data name="lueDocumentTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lueDocumentTypes.Name" xml:space="preserve">
+    <value>lueDocumentTypes</value>
+  </data>
+  <data name="&gt;&gt;lueDocumentTypes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lueDocumentTypes.Parent" xml:space="preserve">
     <value>groupControl1</value>
   </data>
-  <data name="&gt;&gt;cmbPaymentType.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lueDocumentTypes.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="groupControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -793,6 +833,9 @@
   <data name="gridColumn20.Caption" xml:space="preserve">
     <value>Cantidad</value>
   </data>
+  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="gridColumn20.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -815,7 +858,10 @@
     <value>88</value>
   </data>
   <data name="gridColumn19.Caption" xml:space="preserve">
-    <value>Total</value>
+    <value>Sub Total</value>
+  </data>
+  <data name="gridColumn19.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="gridColumn19.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -834,6 +880,48 @@
   </data>
   <data name="gridColumn30.Caption" xml:space="preserve">
     <value>Costo Unitario</value>
+  </data>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABo
+        BwAAAk1TRnQBSQFMAwEBAAEwAQABMAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/9CAAEUQAABD0kAAfEBFD8A
+        AfEBFT8AAfH/AIAAAe8+AAHxARA9AAHxAW2yAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUA
+        AYAXAAP/AQAC/wYAAYABAQYAAcABAQYAAeEB8QYAAfAB+QYAAfgBfQYAAfwBPwYAAf4BHwYAAf8BDwYA
+        Af4BHwYAAfwBPwYAAfgBfQYAAfAB+QYAAeEB8QYAAcABAQYAAv8GAAs=
+</value>
   </data>
   <data name="gvSelectedProducts.ViewCaption" xml:space="preserve">
     <value>Productos Seleccionados</value>
@@ -1408,6 +1496,12 @@
   <data name="&gt;&gt;gridColumn20.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;gridColumn18.Name" xml:space="preserve">
     <value>gridColumn18</value>
   </data>
@@ -1437,6 +1531,12 @@
   </data>
   <data name="&gt;&gt;gridColumn30.Type" xml:space="preserve">
     <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;sleClientsView.Name" xml:space="preserve">
     <value>sleClientsView</value>

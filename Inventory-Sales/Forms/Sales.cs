@@ -38,7 +38,7 @@ namespace Inventory_Sales.Forms
             gcAllProducts.DataSource = API.GetAllProducts("1");
             gcSelectedProducts.DataSource = InitializeGridControlDataSource();
 
-            //sets datasource to client GridView
+            //sets datasource to clients GridView
             sleClients.Properties.DataSource = API.GetClients();
             sleClients.Properties.DisplayMember = "razon_social";
             sleClients.Properties.ValueMember = "id_cliente";
@@ -48,6 +48,66 @@ namespace Inventory_Sales.Forms
             gvPrecioVenta.BestFitColumns(true);
             gvPrecioDescuento.BestFitColumns(true);
             gvSelectedProducts.BestFitColumns(true);
+
+            SetPaymentTypeDataSource();
+            SetDocumentTypesDataSource();
+            SetSaleStatusDataSource();
+        }
+
+        private void SetSaleStatusDataSource()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(int));
+            dt.Columns.Add("status", typeof(string));
+
+            DataRow row = dt.NewRow();
+            row["id"] = 1;
+            row["status"] = "COMPLETADO";
+
+            DataRow row2 = dt.NewRow();
+            row["id"] = 2;
+            row["status"] = "EN ESPERA";
+
+            dt.Rows.Add(row);
+            dt.Rows.Add(row2);
+
+            lueSaleStatus.Properties.DataSource = dt;
+            lueSaleStatus.Properties.DisplayMember = "status";
+            lueSaleStatus.Properties.ValueMember = "id";
+        }
+
+        private void SetDocumentTypesDataSource()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(string));
+            dt.Columns.Add("document_type", typeof(string));
+
+            DataRow row = dt.NewRow();
+            row["id"] = "BOLETAVENTA";
+            row["document_type"] = "BOLETA DE VENTA";
+
+            DataRow row2 = dt.NewRow();
+            row["id"] = "NOTAVENTA";
+            row["document_type"] = "NOTA DE VENTA";
+
+            DataRow row3 = dt.NewRow();
+            row["id"] = "FACTURA";
+            row["document_type"] = "FACTURA";
+
+            dt.Rows.Add(row);
+            dt.Rows.Add(row2);
+            dt.Rows.Add(row3);
+
+            lueDocumentTypes.Properties.DataSource = dt;
+            lueDocumentTypes.Properties.DisplayMember = "document_type";
+            lueDocumentTypes.Properties.ValueMember = "id";
+        }
+
+        private void SetPaymentTypeDataSource()
+        {
+            luePaymentTypes.Properties.DataSource = API.GetPaymentConditions();
+            luePaymentTypes.Properties.DisplayMember = "nombre_condiciones";
+            luePaymentTypes.Properties.ValueMember = "id_condiciones";
         }
 
         private DataTable InitializeGridControlDataSource()
@@ -65,17 +125,6 @@ namespace Inventory_Sales.Forms
             dtSelectedProducts.Columns.Add("producto_costo_unitario", typeof(decimal));
 
             return dtSelectedProducts;
-        }
-
-        private void sleProducts_EditValueChanged(object sender, EventArgs e)
-        {
-            DataRow row = dtSelectedProducts.NewRow();
-           
-            
-            dtSelectedProducts.Rows.Add(row);
-            
-            gcSelectedProducts.DataSource = dtSelectedProducts;
-
         }
 
         private void gvSelectedProducts_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
@@ -199,22 +248,58 @@ namespace Inventory_Sales.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveSaleDialog dialog = new SaveSaleDialog();
-            DialogResult dialogResult = dialog.ShowDialog(this);
+            SaveSaleDialog dialog = new SaveSaleDialog(txtTotal.Text);
+            dialog.PaymentType = luePaymentTypes.Text;
 
-            if (dialogResult == System.Windows.Forms.DialogResult.OK)
+            string saleStatus = lueSaleStatus.Text;
+            bool success = false;
+            if (saleStatus != "EN ESPERA")
             {
-                Sale.DocumentTypeInfo = API.GetDocumentSale(cmbDocumentType.Text);
+                DialogResult dialogResult = dialog.ShowDialog(this);
+
+                if (dialogResult == System.Windows.Forms.DialogResult.OK)
+                {
+                    success = SaveSale(dialog);
+                }
             }
             else
             {
-
+                success = SaveSale(dialog);
             }
+
+            
+        }
+
+        private bool SaveSale(SaveSaleDialog dialog)
+        {
+            Sale.DocumentTypeInfo = API.GetDocumentSale(lueDocumentTypes.Text);
+            Sale.ClientID = Convert.ToInt32(sleClients.Properties.GetDisplayValueByKeyValue(sleClients.EditValue));
+            Sale.SubTotal = Convert.ToDecimal(txtSubTotal.Text);
+            Sale.Tax = Convert.ToDecimal(txtTax.Text);
+            Sale.GrandTotal = Convert.ToDecimal(txtTotal.Text);
+            Sale.SalesmanID = 1; // TODO
+            Sale.LocalID = 1; // TODO
+            Sale.MoneyChange = Convert.ToDecimal(dialog.MoneyChange);
+            Sale.AmountPaid = Convert.ToDecimal(dialog.MoneyPayed);
+            Sale.SaleDate = DateTime.Now;
+            Sale.DocumentType = lueDocumentTypes.Text;
+            Sale.PaymentConditionID = Convert.ToInt32(luePaymentTypes.Properties.GetKeyValueByDisplayValue(luePaymentTypes.EditValue));
+            Sale.SaleStatus = lueSaleStatus.Text;
+            Sale.Products = gcSelectedProducts.DataSource as DataTable;
+
+            return Sale.SaveSale();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            Sale = null;
+            Sale = new Sale();
+            sleClients.Text = "";
+            pceSearchProduct.Text = "";
+            gcSelectedProducts.DataSource = InitializeGridControlDataSource();
+            txtTotal.Text = "";
+            txtSubTotal.Text = "";
+            txtTax.Text = "";
         }
 
         private void btnSavePrint_Click(object sender, EventArgs e)

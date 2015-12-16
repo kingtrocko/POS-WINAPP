@@ -15,3 +15,4 @@ C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-S
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.exe
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.pdb
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.csprojResolveAssemblyReference.cache
+C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Forms.OpenSale.resources

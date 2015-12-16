@@ -69,10 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dsAllProducts.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsAllProducts.xsd</DependentUpon>
+    <Compile Include="Forms\OpenSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenSale.Designer.cs">
+      <DependentUpon>OpenSale.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SaveSaleDialog.cs">
       <SubType>Form</SubType>
@@ -100,6 +101,9 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenSale.resx">
+      <DependentUpon>OpenSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,17 +121,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="dsAllProducts.xsc">
-      <DependentUpon>dsAllProducts.xsd</DependentUpon>
-    </None>
-    <None Include="dsAllProducts.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsAllProducts.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="dsAllProducts.xss">
-      <DependentUpon>dsAllProducts.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

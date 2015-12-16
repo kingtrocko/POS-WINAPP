@@ -31,15 +31,15 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDialogTotal = new DevExpress.XtraEditors.TextEdit();
+            this.txtDialogMoneyPayed = new DevExpress.XtraEditors.TextEdit();
+            this.txtDialogMoneyChange = new DevExpress.XtraEditors.TextEdit();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogMoneyPayed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogMoneyChange.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -69,32 +69,41 @@
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Vuelto";
             // 
-            // textEdit1
+            // txtDialogTotal
             // 
-            this.textEdit1.Location = new System.Drawing.Point(137, 57);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(169, 24);
-            this.textEdit1.TabIndex = 3;
+            this.txtDialogTotal.Location = new System.Drawing.Point(137, 57);
+            this.txtDialogTotal.Name = "txtDialogTotal";
+            this.txtDialogTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtDialogTotal.Properties.Appearance.Options.UseFont = true;
+            this.txtDialogTotal.Properties.DisplayFormat.FormatString = "c";
+            this.txtDialogTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDialogTotal.Properties.ReadOnly = true;
+            this.txtDialogTotal.Size = new System.Drawing.Size(169, 24);
+            this.txtDialogTotal.TabIndex = 3;
             // 
-            // textEdit2
+            // txtDialogMoneyPayed
             // 
-            this.textEdit2.Location = new System.Drawing.Point(137, 95);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(169, 24);
-            this.textEdit2.TabIndex = 4;
+            this.txtDialogMoneyPayed.Location = new System.Drawing.Point(137, 95);
+            this.txtDialogMoneyPayed.Name = "txtDialogMoneyPayed";
+            this.txtDialogMoneyPayed.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtDialogMoneyPayed.Properties.Appearance.Options.UseFont = true;
+            this.txtDialogMoneyPayed.Properties.DisplayFormat.FormatString = "c";
+            this.txtDialogMoneyPayed.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDialogMoneyPayed.Size = new System.Drawing.Size(169, 24);
+            this.txtDialogMoneyPayed.TabIndex = 4;
+            this.txtDialogMoneyPayed.EditValueChanged += new System.EventHandler(this.txtDialogMoneyPayed_EditValueChanged);
             // 
-            // textEdit3
+            // txtDialogMoneyChange
             // 
-            this.textEdit3.Location = new System.Drawing.Point(137, 135);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(169, 24);
-            this.textEdit3.TabIndex = 5;
+            this.txtDialogMoneyChange.Location = new System.Drawing.Point(137, 135);
+            this.txtDialogMoneyChange.Name = "txtDialogMoneyChange";
+            this.txtDialogMoneyChange.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtDialogMoneyChange.Properties.Appearance.Options.UseFont = true;
+            this.txtDialogMoneyChange.Properties.DisplayFormat.FormatString = "c";
+            this.txtDialogMoneyChange.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtDialogMoneyChange.Properties.ReadOnly = true;
+            this.txtDialogMoneyChange.Size = new System.Drawing.Size(169, 24);
+            this.txtDialogMoneyChange.TabIndex = 5;
             // 
             // btnSave
             // 
@@ -135,17 +144,18 @@
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtDialogMoneyChange);
+            this.Controls.Add(this.txtDialogMoneyPayed);
+            this.Controls.Add(this.txtDialogTotal);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "SaveSaleDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Guardar Venta";
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogMoneyPayed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDialogMoneyChange.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,9 +166,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtDialogTotal;
+        private DevExpress.XtraEditors.TextEdit txtDialogMoneyPayed;
+        private DevExpress.XtraEditors.TextEdit txtDialogMoneyChange;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.LabelControl labelControl4;

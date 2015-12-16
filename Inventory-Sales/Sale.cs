@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace Inventory_Sales
 {
@@ -41,12 +42,13 @@ namespace Inventory_Sales
 
         public Sale()
         {
-            connection = new MySqlConnection(ConnectionString);
+            
         }
 
        
-        public void SaveSale()
+        public bool SaveSale()
         {
+            connection = new MySqlConnection(ConnectionString);
             transaction = connection.BeginTransaction();
             try
             {
@@ -55,17 +57,19 @@ namespace Inventory_Sales
                 InsertSaleDetail();
 
                 this.transaction.Commit();
+                return true;
             }
             catch (Exception e)
             {
                 transaction.Rollback();
+                Debug.WriteLine(e.Message);
+                return false;
             }
             finally
             {
                 connection.Close();
                 connection.Dispose();
             }
-
         }
 
         private long InsertDocumentSale()

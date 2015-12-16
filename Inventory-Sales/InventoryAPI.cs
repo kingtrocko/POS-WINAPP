@@ -110,6 +110,33 @@ namespace Inventory_Sales
             return ds.Tables["document_sale"];
         }
 
+        public DataTable GetPaymentConditions()
+        {
+            IRestResponse res = MakeHTTPRequest("/api/payment-conditions", Method.GET, null);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["payment_conditions"];
+        }
+
+        public DataTable GetSales(string local_id, int sale_status)
+        {
+            List<Parameter> plist = new List<Parameter>();
+            Parameter p = new Parameter();
+            p.Name = "local_id";
+            p.Value = local_id;
+            p.Type = ParameterType.QueryString;
+
+            Parameter p2 = new Parameter();
+            p.Name = "status";
+            p.Value = sale_status;
+            p.Type = ParameterType.QueryString;
+
+            plist.Add(p); plist.Add(p2);
+
+            IRestResponse res = MakeHTTPRequest("/api/sales", Method.GET, plist);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["sales"];
+        }
+
         private IRestResponse MakeHTTPRequest(string uri, Method method, List<Parameter> parameters)
         {
             var request = new RestRequest(uri, method);

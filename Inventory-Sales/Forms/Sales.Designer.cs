@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
@@ -67,9 +68,9 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtSubTotal = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.cmbSaleStatus = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cmbDocumentType = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cmbPaymentType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lueSaleStatus = new DevExpress.XtraEditors.LookUpEdit();
+            this.luePaymentTypes = new DevExpress.XtraEditors.LookUpEdit();
+            this.lueDocumentTypes = new DevExpress.XtraEditors.LookUpEdit();
             this.gcSelectedProducts = new DevExpress.XtraGrid.GridControl();
             this.gvSelectedProducts = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,11 +78,13 @@
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gcSearchProductBar = new DevExpress.XtraEditors.GroupControl();
             this.pceSearchProduct = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
@@ -125,11 +128,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSaleStatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbDocumentType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbPaymentType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueSaleStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePaymentTypes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDocumentTypes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchProductBar)).BeginInit();
             this.gcSearchProductBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).BeginInit();
@@ -192,6 +196,8 @@
             // gridColumn27
             // 
             resources.ApplyResources(this.gridColumn27, "gridColumn27");
+            this.gridColumn27.DisplayFormat.FormatString = "c";
+            this.gridColumn27.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn27.FieldName = "precio";
             this.gridColumn27.Name = "gridColumn27";
             // 
@@ -253,6 +259,8 @@
             // gridColumn28
             // 
             resources.ApplyResources(this.gridColumn28, "gridColumn28");
+            this.gridColumn28.DisplayFormat.FormatString = "c";
+            this.gridColumn28.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn28.FieldName = "nombre_unidad";
             this.gridColumn28.Name = "gridColumn28";
             // 
@@ -439,6 +447,9 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtTotal.Properties.Appearance.Font")));
             this.txtTotal.Properties.Appearance.Options.UseFont = true;
+            this.txtTotal.Properties.DisplayFormat.FormatString = "c";
+            this.txtTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotal.Properties.ReadOnly = true;
             // 
             // labelControl3
             // 
@@ -452,6 +463,9 @@
             this.txtTax.Name = "txtTax";
             this.txtTax.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtTax.Properties.Appearance.Font")));
             this.txtTax.Properties.Appearance.Options.UseFont = true;
+            this.txtTax.Properties.DisplayFormat.FormatString = "c";
+            this.txtTax.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTax.Properties.ReadOnly = true;
             // 
             // labelControl2
             // 
@@ -471,54 +485,62 @@
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtSubTotal.Properties.Appearance.Font")));
             this.txtSubTotal.Properties.Appearance.Options.UseFont = true;
+            this.txtSubTotal.Properties.DisplayFormat.FormatString = "c";
+            this.txtSubTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSubTotal.Properties.ReadOnly = true;
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.cmbSaleStatus);
-            this.groupControl1.Controls.Add(this.cmbDocumentType);
-            this.groupControl1.Controls.Add(this.cmbPaymentType);
+            this.groupControl1.Controls.Add(this.lueSaleStatus);
+            this.groupControl1.Controls.Add(this.luePaymentTypes);
+            this.groupControl1.Controls.Add(this.lueDocumentTypes);
             resources.ApplyResources(this.groupControl1, "groupControl1");
             this.groupControl1.Name = "groupControl1";
             // 
-            // cmbSaleStatus
+            // lueSaleStatus
             // 
-            resources.ApplyResources(this.cmbSaleStatus, "cmbSaleStatus");
-            this.cmbSaleStatus.Name = "cmbSaleStatus";
-            this.cmbSaleStatus.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbSaleStatus.Properties.Appearance.Font")));
-            this.cmbSaleStatus.Properties.Appearance.Options.UseFont = true;
-            this.cmbSaleStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbSaleStatus.Properties.Buttons"))))});
-            this.cmbSaleStatus.Properties.Items.AddRange(new object[] {
-            resources.GetString("cmbSaleStatus.Properties.Items"),
-            resources.GetString("cmbSaleStatus.Properties.Items1")});
-            this.cmbSaleStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            resources.ApplyResources(this.lueSaleStatus, "lueSaleStatus");
+            this.lueSaleStatus.Name = "lueSaleStatus";
+            this.lueSaleStatus.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("lueSaleStatus.Properties.Appearance.Font")));
+            this.lueSaleStatus.Properties.Appearance.Options.UseFont = true;
+            this.lueSaleStatus.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            this.lueSaleStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lueSaleStatus.Properties.Buttons"))))});
+            this.lueSaleStatus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns"), resources.GetString("lueSaleStatus.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns2"), resources.GetString("lueSaleStatus.Properties.Columns3"))});
+            this.lueSaleStatus.Properties.NullText = resources.GetString("lueSaleStatus.Properties.NullText");
+            this.lueSaleStatus.Properties.PopupSizeable = false;
             // 
-            // cmbDocumentType
+            // luePaymentTypes
             // 
-            resources.ApplyResources(this.cmbDocumentType, "cmbDocumentType");
-            this.cmbDocumentType.Name = "cmbDocumentType";
-            this.cmbDocumentType.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbDocumentType.Properties.Appearance.Font")));
-            this.cmbDocumentType.Properties.Appearance.Options.UseFont = true;
-            this.cmbDocumentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbDocumentType.Properties.Buttons"))))});
-            this.cmbDocumentType.Properties.Items.AddRange(new object[] {
-            resources.GetString("cmbDocumentType.Properties.Items"),
-            resources.GetString("cmbDocumentType.Properties.Items1"),
-            resources.GetString("cmbDocumentType.Properties.Items2")});
-            this.cmbDocumentType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            resources.ApplyResources(this.luePaymentTypes, "luePaymentTypes");
+            this.luePaymentTypes.Name = "luePaymentTypes";
+            this.luePaymentTypes.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("luePaymentTypes.Properties.Appearance.Font")));
+            this.luePaymentTypes.Properties.Appearance.Options.UseFont = true;
+            this.luePaymentTypes.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            this.luePaymentTypes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("luePaymentTypes.Properties.Buttons"))))});
+            this.luePaymentTypes.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns"), resources.GetString("luePaymentTypes.Properties.Columns1"), ((int)(resources.GetObject("luePaymentTypes.Properties.Columns2"))), ((DevExpress.Utils.FormatType)(resources.GetObject("luePaymentTypes.Properties.Columns3"))), resources.GetString("luePaymentTypes.Properties.Columns4"), ((bool)(resources.GetObject("luePaymentTypes.Properties.Columns5"))), ((DevExpress.Utils.HorzAlignment)(resources.GetObject("luePaymentTypes.Properties.Columns6")))),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns7"), resources.GetString("luePaymentTypes.Properties.Columns8"))});
+            this.luePaymentTypes.Properties.NullText = resources.GetString("luePaymentTypes.Properties.NullText");
+            this.luePaymentTypes.Properties.PopupSizeable = false;
             // 
-            // cmbPaymentType
+            // lueDocumentTypes
             // 
-            resources.ApplyResources(this.cmbPaymentType, "cmbPaymentType");
-            this.cmbPaymentType.Name = "cmbPaymentType";
-            this.cmbPaymentType.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("cmbPaymentType.Properties.Appearance.Font")));
-            this.cmbPaymentType.Properties.Appearance.Options.UseFont = true;
-            this.cmbPaymentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("cmbPaymentType.Properties.Buttons"))))});
-            this.cmbPaymentType.Properties.Items.AddRange(new object[] {
-            resources.GetString("cmbPaymentType.Properties.Items"),
-            resources.GetString("cmbPaymentType.Properties.Items1")});
-            this.cmbPaymentType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            resources.ApplyResources(this.lueDocumentTypes, "lueDocumentTypes");
+            this.lueDocumentTypes.Name = "lueDocumentTypes";
+            this.lueDocumentTypes.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("lueDocumentTypes.Properties.Appearance.Font")));
+            this.lueDocumentTypes.Properties.Appearance.Options.UseFont = true;
+            this.lueDocumentTypes.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            this.lueDocumentTypes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lueDocumentTypes.Properties.Buttons"))))});
+            this.lueDocumentTypes.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns"), resources.GetString("lueDocumentTypes.Properties.Columns1")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns2"), resources.GetString("lueDocumentTypes.Properties.Columns3"))});
+            this.lueDocumentTypes.Properties.NullText = resources.GetString("lueDocumentTypes.Properties.NullText");
+            this.lueDocumentTypes.Properties.PopupSizeable = false;
             // 
             // gcSelectedProducts
             // 
@@ -526,6 +548,8 @@
             resources.ApplyResources(this.gcSelectedProducts, "gcSelectedProducts");
             this.gcSelectedProducts.MainView = this.gvSelectedProducts;
             this.gcSelectedProducts.Name = "gcSelectedProducts";
+            this.gcSelectedProducts.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.gcSelectedProducts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSelectedProducts});
             // 
@@ -559,6 +583,7 @@
             this.gridColumn30});
             this.gvSelectedProducts.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvSelectedProducts.GridControl = this.gcSelectedProducts;
+            this.gvSelectedProducts.Images = this.imageList1;
             this.gvSelectedProducts.Name = "gvSelectedProducts";
             this.gvSelectedProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
             this.gvSelectedProducts.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.Inplace;
@@ -609,12 +634,20 @@
             // gridColumn20
             // 
             resources.ApplyResources(this.gridColumn20, "gridColumn20");
+            this.gridColumn20.ColumnEdit = this.repositoryItemTextEdit1;
             this.gridColumn20.FieldName = "cantidad";
             this.gridColumn20.Name = "gridColumn20";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemTextEdit1, "repositoryItemTextEdit1");
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // gridColumn18
             // 
             resources.ApplyResources(this.gridColumn18, "gridColumn18");
+            this.gridColumn18.DisplayFormat.FormatString = "c";
+            this.gridColumn18.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn18.FieldName = "precio";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
@@ -622,6 +655,8 @@
             // gridColumn19
             // 
             resources.ApplyResources(this.gridColumn19, "gridColumn19");
+            this.gridColumn19.DisplayFormat.FormatString = "c";
+            this.gridColumn19.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn19.FieldName = "Total";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.OptionsColumn.AllowEdit = false;
@@ -644,8 +679,16 @@
             // gridColumn30
             // 
             resources.ApplyResources(this.gridColumn30, "gridColumn30");
+            this.gridColumn30.DisplayFormat.FormatString = "c";
+            this.gridColumn30.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn30.FieldName = "producto_costo_unitario";
             this.gridColumn30.Name = "gridColumn30";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "sub_total.png");
             // 
             // gcSearchProductBar
             // 
@@ -890,11 +933,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSaleStatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbDocumentType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbPaymentType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueSaleStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.luePaymentTypes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueDocumentTypes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSelectedProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvSelectedProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchProductBar)).EndInit();
             this.gcSearchProductBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pceSearchProduct.Properties)).EndInit();
@@ -975,9 +1019,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbSaleStatus;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbDocumentType;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbPaymentType;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton btnSavePrint;
@@ -997,6 +1038,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private System.Windows.Forms.ImageList imageList1;
+        private DevExpress.XtraEditors.LookUpEdit lueSaleStatus;
+        private DevExpress.XtraEditors.LookUpEdit lueDocumentTypes;
+        private DevExpress.XtraEditors.LookUpEdit luePaymentTypes;
 
     }
 }
