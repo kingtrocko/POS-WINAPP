@@ -116,6 +116,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioDescuento)).BeginInit();
@@ -737,7 +738,7 @@
             // 
             resources.ApplyResources(this.txtSaleId, "txtSaleId");
             this.txtSaleId.Name = "txtSaleId";
-            this.txtSaleId.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtVentaId.Properties.Appearance.Font")));
+            this.txtSaleId.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtSaleId.Properties.Appearance.Font")));
             this.txtSaleId.Properties.Appearance.Options.UseFont = true;
             this.txtSaleId.Properties.ReadOnly = true;
             // 
@@ -1096,6 +1097,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        
 
     }
 }

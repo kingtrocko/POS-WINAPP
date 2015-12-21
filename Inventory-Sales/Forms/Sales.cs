@@ -281,24 +281,34 @@ namespace Inventory_Sales.Forms
                 string saleStatus = lueSaleStatus.Text;
                 bool success = false;
 
-                if (txtSaleId.Text == string.Empty)
+                if (saleStatus != "EN ESPERA")
                 {
-                    if (saleStatus != "EN ESPERA")
-                    {
-                        DialogResult dialogResult = dialog.ShowDialog(this);
+                    DialogResult dialogResult = dialog.ShowDialog(this);
 
+                    if (txtSaleId.Text == string.Empty)
+                    {
                         if (dialogResult == System.Windows.Forms.DialogResult.OK)
-                            success = SaveSale(dialog);
+                            success = SaveOrUpdateSale(dialog, "save");
                     }
                     else
-                        success = SaveSale(dialog);
+                    {
+                        Sale.SaleID = Convert.ToInt32(txtSaleId.Text);
+                        success = SaveOrUpdateSale(dialog, "update");
+                    }
+                        
                 }
-                else //UPDATE sale
+                else
                 {
-
+                    if (txtSaleId.Text == string.Empty)
+                        success = SaveOrUpdateSale(dialog, "save");
+                    else
+                    {
+                        Sale.SaleID = Convert.ToInt32(txtSaleId.Text);
+                        success = SaveOrUpdateSale(dialog, "update");
+                    }
+                        
                 }
-                
-                
+                    
 
                 if (success){
                     XtraMessageBox.Show("Felicidades! La venta se ha Guardado Exitosamente");
@@ -478,7 +488,7 @@ namespace Inventory_Sales.Forms
             return sb.ToString();
         }
 
-        private bool SaveSale(SaveSaleDialog dialog)
+        private bool SaveOrUpdateSale(SaveSaleDialog dialog, string action)
         {
             Sale.DocumentTypeInfo = API.GetDocumentSale(lueDocumentTypes.Text);
             Sale.ClientID = Convert.ToInt32(sleClients.EditValue);
@@ -503,8 +513,10 @@ namespace Inventory_Sales.Forms
                 Sale.QuotaNumber = 1;
                 Sale.AmountPerQuota = Convert.ToDecimal(this.txtTotal.Text);
             }
-
-            return Sale.SaveSale();
+            if (action == "save")
+                return Sale.SaveSale();
+            else 
+                return Sale.UpdateExistingSale();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

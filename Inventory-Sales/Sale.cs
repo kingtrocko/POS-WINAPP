@@ -29,7 +29,7 @@ namespace Inventory_Sales
         public int QuotaNumber { get; set; }
         public decimal AmountPerQuota { get; set; }
         
-        private long SaleID { get; set; }
+        public long SaleID { get; set; }
         
         private long DocumentID { get; set; }
         private string ConnectionString
@@ -88,12 +88,26 @@ namespace Inventory_Sales
                 RemoveProducItemsFromInventory();
                 UpdateSaleHeader();
                 DeleteSaleDetail();
+                UpdateSaleDetail();
 
-
+                transaction.Commit();
+                return true;
             }
             catch (Exception e)
             {
-
+                transaction.Rollback();
+                Debug.WriteLine("==================== ERROR MESSAGE ====================");
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine("==================== ERROR STACK TRACE ====================");
+                Debug.WriteLine(e.StackTrace);
+                Debug.WriteLine("==================== ERROR INNER EXCEPTION ====================");
+                Debug.WriteLine(e.InnerException);
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
             }
         }
 
@@ -435,7 +449,7 @@ namespace Inventory_Sales
                     minUnitsInStock = currentFractionInStock;
                 }
 
-                int minUnitsInDetail = Convert.ToInt32(unitsRow["unidades"]) * productQuantity;
+                int minUnitsInDetail = Convert.ToInt32(unitsRow[0]["unidades"]) * productQuantity;
                 int sum = minUnitsInStock + minUnitsInDetail;
                 int cont = 0;
                 int newQuantity = 0;
@@ -443,7 +457,7 @@ namespace Inventory_Sales
 
                 while(sum >= maxUnit){
                     cont++;
-                    sum = sum - maxUnit
+                    sum = sum - maxUnit;
                 }
                 if(cont < 1){
                     newQuantity = 0;
@@ -479,8 +493,8 @@ namespace Inventory_Sales
         private void UpdateSaleHeader()
         {
             string query = @"UPDATE venta SET fecha=@date,id_vendedor=@salesman_id, local_id=@local_id, subtotal=@subtotal,total_impuesto=@total_tax,total=@grand_total,
-                            pagado=@money_paid, vuelto=@money_change, id_cliente=@client_id,venta_status=@status,@condicion_pago=@payment_condition
-                            WHERE venta id_venta = @sale_id";
+                            pagado=@money_paid, vuelto=@money_change, id_cliente=@client_id,venta_status=@status,condicion_pago=@payment_condition
+                            WHERE venta_id = @sale_id";
             MySqlCommand command = new MySqlCommand(query, connection, transaction);
             command.Parameters.AddWithValue("@date", this.SaleDate);
             command.Parameters.AddWithValue("@salesman_id", this.SalesmanID);
@@ -489,10 +503,11 @@ namespace Inventory_Sales
             command.Parameters.AddWithValue("@total_tax", this.Tax);
             command.Parameters.AddWithValue("@grand_total", this.GrandTotal);
             command.Parameters.AddWithValue("@money_paid", this.AmountPaid);
-            command.Parameters.AddWithValue("@,pney_change", this.MoneyChange);
+            command.Parameters.AddWithValue("@money_change", this.MoneyChange);
             command.Parameters.AddWithValue("@client_id", this.ClientID);
             command.Parameters.AddWithValue("@status", this.SaleStatus);
             command.Parameters.AddWithValue("@payment_condition", this.PaymentConditionID);
+            command.Parameters.AddWithValue("@sale_id", this.SaleID);
             int rowsAffected = command.ExecuteNonQuery();
 
             Debug.WriteLine("UPDATED venta. rows affected = " + rowsAffected.ToString());
@@ -503,6 +518,7 @@ namespace Inventory_Sales
         {
             string query = "DELETE FROM detalle_venta where id_venta = @sale_id";
             MySqlCommand cmd = new MySqlCommand(query, this.connection, this.transaction);
+            cmd.Parameters.AddWithValue("@sale_id", this.SaleID);
             int rowsAffected = Convert.ToInt32(cmd.ExecuteNonQuery());
 
             Debug.WriteLine("DELETED from detalle_venta. rows affected: " + rowsAffected.ToString());
@@ -658,10 +674,78 @@ namespace Inventory_Sales
                 }
             }
 
-            if (this.PaymentConditionDays < 1)
-                InsertCashSale();
+            if (this.PaymentConditionDays < 1){
+                DataTable dtContado = GetCashSale();
+
+                if (dtContado.Rows.Count > 0)
+                    UpdateCashSale();
+                else
+                    InsertCashSale();
+            }
             else
-                InsertCreditSale();
+            {
+                DataTable dtCreditSale = GetCreditSale();
+                if (dtCreditSale.Rows.Count > 0)
+                    UpdateCreditSale();
+                else
+                    InsertCreditSale();
+            }
+                
+        }
+
+        private void UpdateCreditSale()
+        {
+
+            string query = @"UPDATE credito SET id_venta=@sale_id, int_credito_nrocuota=@num_cuota, dec_credito_montocuota=@monto_cuota, 
+                            var_credito_estado=@status,dec_credito_montodebito = @monto_debito
+                            WHERE id_venta = @sale_id";
+
+            MySqlCommand cmd = new MySqlCommand(query, this.connection, this.transaction);
+            cmd.Parameters.AddWithValue("@sale_id", this.SaleID);
+            cmd.Parameters.AddWithValue("@num_cuota", this.QuotaNumber);
+            cmd.Parameters.AddWithValue("@monto_cuota", this.AmountPerQuota);
+            cmd.Parameters.AddWithValue("@status", "Debito");
+            cmd.Parameters.AddWithValue("@monto_debito", 0.0);
+
+            int row = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+            Debug.WriteLine("UPDATED in credito with ID: " + row.ToString());
+        }
+
+        private void UpdateCashSale()
+        {
+            string query = "UPDATE contado SET status=@status, montopagado=@grand_total where id_venta=@sale_id";
+            MySqlCommand cmd = new MySqlCommand(query, this.connection, this.transaction);
+            cmd.Parameters.AddWithValue("@status", "PagoCancelado");
+            cmd.Parameters.AddWithValue("@grand_total", this.GrandTotal);
+            cmd.Parameters.AddWithValue("@sale_id", this.SaleID);
+            int rows = Convert.ToInt32(cmd.ExecuteNonQuery());
+
+            Debug.WriteLine("UPDATED contado. rows affected: " + rows.ToString());
+        }
+
+        private DataTable GetCashSale()
+        {
+            string query = "SELECT * from contado where id_venta = @sale_id";
+            MySqlCommand cmd = new MySqlCommand(query, this.connection, this.transaction);
+            cmd.Parameters.AddWithValue("@sale_id", this.SaleID);
+            
+            var dt = new DataTable();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            dt.Load(reader);
+            return dt;
+        }
+
+        private DataTable GetCreditSale()
+        {
+            string query = "SELECT * from credito where id_venta = @sale_id";
+            MySqlCommand cmd = new MySqlCommand(query, this.connection, this.transaction);
+            cmd.Parameters.AddWithValue("@sale_id", this.SaleID);
+
+            var dt = new DataTable();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            dt.Load(reader);
+            return dt;
         }
     
     }
