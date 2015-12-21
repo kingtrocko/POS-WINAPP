@@ -7,6 +7,7 @@ C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-S
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\bin\Debug\RestSharp.xml
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Login.resources
+C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Forms.OpenSale.resources
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Forms.Sales.resources
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Forms.SaveSaleDialog.resources
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Properties.Resources.resources
@@ -15,4 +16,3 @@ C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-S
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.exe
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.pdb
 C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory-Sales.csprojResolveAssemblyReference.cache
-C:\Users\Nahum\Documents\Visual Studio 2013\Projects\Inventory-Sales\Inventory-Sales\obj\Debug\Inventory_Sales.Forms.OpenSale.resources

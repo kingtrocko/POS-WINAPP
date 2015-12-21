@@ -17,11 +17,13 @@ namespace Inventory_Sales.Forms
 {
     public partial class Sales : DevExpress.XtraEditors.XtraForm
     {
-        DataTable dtSelectedProducts;
-        DataTable dtPricesTypes;
-        InventoryAPI API;
-        Sale Sale;
-        int selectedProductRowHandle = -1;
+        private DataTable dtSelectedProducts;
+        private DataTable dtPricesTypes;
+        private DataTable dtPaymentTypes;
+        private InventoryAPI API;
+        private Sale Sale;
+        private int selectedProductRowHandle = -1;
+        private decimal taxPercentage;
 
         public Sales()
         {
@@ -33,6 +35,9 @@ namespace Inventory_Sales.Forms
 
             //Get prices types from API
             dtPricesTypes = API.GetPricesTypes();
+
+            //Get tax percentage
+            taxPercentage = Convert.ToDecimal(API.GetTax().Rows[0]["porcentaje_impuesto"]) / 100;
 
             //Sets datasource for all products GridControl
             gcAllProducts.DataSource = API.GetAllProducts("1");
@@ -52,6 +57,8 @@ namespace Inventory_Sales.Forms
             SetPaymentTypeDataSource();
             SetDocumentTypesDataSource();
             SetSaleStatusDataSource();
+
+            txtSaleId.Text = "";
         }
 
         private void SetSaleStatusDataSource()
@@ -65,8 +72,8 @@ namespace Inventory_Sales.Forms
             row["status"] = "COMPLETADO";
 
             DataRow row2 = dt.NewRow();
-            row["id"] = 2;
-            row["status"] = "EN ESPERA";
+            row2["id"] = 2;
+            row2["status"] = "EN ESPERA";
 
             dt.Rows.Add(row);
             dt.Rows.Add(row2);
@@ -83,16 +90,16 @@ namespace Inventory_Sales.Forms
             dt.Columns.Add("document_type", typeof(string));
 
             DataRow row = dt.NewRow();
-            row["id"] = "BOLETAVENTA";
+            row["id"] = "BOLETA DE VENTA";
             row["document_type"] = "BOLETA DE VENTA";
 
             DataRow row2 = dt.NewRow();
-            row["id"] = "NOTAVENTA";
-            row["document_type"] = "NOTA DE VENTA";
+            row2["id"] = "NOTA DE PEDIDO";
+            row2["document_type"] = "NOTA DE PEDIDO";
 
             DataRow row3 = dt.NewRow();
-            row["id"] = "FACTURA";
-            row["document_type"] = "FACTURA";
+            row3["id"] = "FACTURA";
+            row3["document_type"] = "FACTURA";
 
             dt.Rows.Add(row);
             dt.Rows.Add(row2);
@@ -105,7 +112,8 @@ namespace Inventory_Sales.Forms
 
         private void SetPaymentTypeDataSource()
         {
-            luePaymentTypes.Properties.DataSource = API.GetPaymentConditions();
+            dtPaymentTypes = API.GetPaymentConditions();
+            luePaymentTypes.Properties.DataSource = dtPaymentTypes;
             luePaymentTypes.Properties.DisplayMember = "nombre_condiciones";
             luePaymentTypes.Properties.ValueMember = "id_condiciones";
         }
@@ -121,7 +129,7 @@ namespace Inventory_Sales.Forms
             dtSelectedProducts.Columns.Add("cantidad", typeof(int));
             dtSelectedProducts.Columns.Add("precio", typeof(decimal));
             dtSelectedProducts.Columns.Add("id_unidad", typeof(int));
-            dtSelectedProducts.Columns.Add("id_precio", typeof(int));
+            //dtSelectedProducts.Columns.Add("id_precio", typeof(int));
             dtSelectedProducts.Columns.Add("producto_costo_unitario", typeof(decimal));
 
             return dtSelectedProducts;
@@ -136,7 +144,6 @@ namespace Inventory_Sales.Forms
         {
             txtSubTotal.Text = getSubtotal().ToString();
         }
-
 
         private Decimal getSubtotal()
         {
@@ -211,7 +218,7 @@ namespace Inventory_Sales.Forms
                 row["cantidad"] = 1;
                 row["precio"] = precio;
                 row["id_unidad"] = selectedPriceRow.Row["id_unidad"];
-                row["id_precio"] = selectedPriceRow.Row["id_precio"];
+                //row["id_precio"] = selectedPriceRow.Row["id_precio"];
                 row["producto_costo_unitario"] = selectedProductRow.Row["producto_costo_unitario"];
 
                 dtSelectedProducts.Rows.Add(row);
@@ -243,68 +250,307 @@ namespace Inventory_Sales.Forms
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
+            OpenSale openSale = new OpenSale("1", "EN ESPERA");
+            DialogResult result = openSale.ShowDialog(this);
 
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                DataTable products = openSale.SaleProducts;
+                this.txtSaleId.Text = products.Rows[0]["venta_id"].ToString();
+                this.lueDocumentTypes.EditValue = products.Rows[0]["nombre_tipo_documento"].ToString();
+                this.sleClients.EditValue = products.Rows[0]["cliente_id"];
+                this.luePaymentTypes.EditValue = products.Rows[0]["id_condiciones"];
+                this.lueSaleStatus.EditValue = 1;
+
+                dtSelectedProducts = products;
+                this.gcSelectedProducts.DataSource = dtSelectedProducts;
+
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveSaleDialog dialog = new SaveSaleDialog(txtTotal.Text);
-            dialog.PaymentType = luePaymentTypes.Text;
+            string validationMessage = ValidateRequeriedFields();
 
-            string saleStatus = lueSaleStatus.Text;
-            bool success = false;
-            if (saleStatus != "EN ESPERA")
+            if (validationMessage.Equals(string.Empty))
             {
-                DialogResult dialogResult = dialog.ShowDialog(this);
+                string paymentType = luePaymentTypes.Text;
+                SaveSaleDialog dialog = new SaveSaleDialog(txtTotal.Text, paymentType);
+                dialog.PaymentType = luePaymentTypes.Text;
 
-                if (dialogResult == System.Windows.Forms.DialogResult.OK)
+                string saleStatus = lueSaleStatus.Text;
+                bool success = false;
+
+                if (txtSaleId.Text == string.Empty)
                 {
-                    success = SaveSale(dialog);
+                    if (saleStatus != "EN ESPERA")
+                    {
+                        DialogResult dialogResult = dialog.ShowDialog(this);
+
+                        if (dialogResult == System.Windows.Forms.DialogResult.OK)
+                            success = SaveSale(dialog);
+                    }
+                    else
+                        success = SaveSale(dialog);
                 }
+                else //UPDATE sale
+                {
+
+                }
+                
+                
+
+                if (success){
+                    XtraMessageBox.Show("Felicidades! La venta se ha Guardado Exitosamente");
+                    ClearFields();
+                }
+                else
+                    XtraMessageBox.Show("Ocurrio un error al momento de Guardar la Venta", "ERROR");
             }
             else
             {
-                success = SaveSale(dialog);
+                XtraMessageBox.Show(validationMessage, "Acciones Requeridas");
             }
 
-            
+           
+        }
+
+        private string ValidateRequeriedFields()
+        {
+            string message = "";
+            DataTable selectedProducts = ((DataTable)gcSelectedProducts.DataSource);
+            StringBuilder sb = new StringBuilder();
+
+            if (sleClients.Text == string.Empty && luePaymentTypes.Text == string.Empty && 
+                lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty && selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Seleccione un cliente");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Documento" );
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (sleClients.Text == string.Empty && luePaymentTypes.Text == string.Empty &&
+                lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un cliente");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+            else if (sleClients.Text == string.Empty && luePaymentTypes.Text == string.Empty && lueDocumentTypes.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un cliente");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Documento");
+            }
+            else if (sleClients.Text == string.Empty && luePaymentTypes.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un cliente");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+            }
+            else if (sleClients.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un cliente");
+            }
+            else if (luePaymentTypes.Text == string.Empty &&
+               lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty && selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (luePaymentTypes.Text == string.Empty && lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+            else if (luePaymentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+            else if (luePaymentTypes.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+            }
+            else if (lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty && selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (lueDocumentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+            else if (lueDocumentTypes.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Documento");
+            }
+            else if (lueSaleStatus.Text == string.Empty && selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+            else if (selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (selectedProducts.Rows.Count <= 0 && sleClients.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un cliente");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (selectedProducts.Rows.Count <= 0 && luePaymentTypes.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (selectedProducts.Rows.Count <= 0 && lueDocumentTypes.Text == string.Empty)
+            {
+                sb.Append("- Especifique el tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (selectedProducts.Rows.Count <= 0 && lueSaleStatus.Text == string.Empty)
+            {
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            }
+            else if (lueDocumentTypes.Text == string.Empty && luePaymentTypes.Text == string.Empty)
+            {
+                sb.Append("- Especifique el Tipo de Documento");
+                sb.AppendLine();
+                sb.Append("- Especifique el Tipo de Pago (Contado o Crédito)");
+            }
+            else if (lueSaleStatus.Text == string.Empty && sleClients.Text == string.Empty)
+            {
+                sb.Append("- Seleccione un Cliente");
+                sb.AppendLine();
+                sb.Append("- Seleccione el Estado de la Venta");                
+            }
+            else if (luePaymentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty && selectedProducts.Rows.Count <= 0)
+            {
+                sb.Append("- Especifique el Tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+                sb.AppendLine();
+                sb.Append("- Agregue por lo menos un producto a la Venta");
+            } else if(sleClients.Text == string.Empty && luePaymentTypes.Text == string.Empty && lueSaleStatus.Text == string.Empty){
+                sb.Append("- Seleccione un Cliente");
+                sb.AppendLine();
+                sb.Append("- Especifique el Tipo de Pago (Contado o Crédito)");
+                sb.AppendLine();
+                sb.Append("- Especifique el Estado de la Venta");
+            }
+
+            return sb.ToString();
         }
 
         private bool SaveSale(SaveSaleDialog dialog)
         {
             Sale.DocumentTypeInfo = API.GetDocumentSale(lueDocumentTypes.Text);
-            Sale.ClientID = Convert.ToInt32(sleClients.Properties.GetDisplayValueByKeyValue(sleClients.EditValue));
+            Sale.ClientID = Convert.ToInt32(sleClients.EditValue);
             Sale.SubTotal = Convert.ToDecimal(txtSubTotal.Text);
             Sale.Tax = Convert.ToDecimal(txtTax.Text);
             Sale.GrandTotal = Convert.ToDecimal(txtTotal.Text);
-            Sale.SalesmanID = 1; // TODO
+            Sale.SalesmanID = 11; // TODO
             Sale.LocalID = 1; // TODO
             Sale.MoneyChange = Convert.ToDecimal(dialog.MoneyChange);
-            Sale.AmountPaid = Convert.ToDecimal(dialog.MoneyPayed);
+            Sale.AmountPaid = Convert.ToDecimal(dialog.MoneyPaid);
             Sale.SaleDate = DateTime.Now;
             Sale.DocumentType = lueDocumentTypes.Text;
-            Sale.PaymentConditionID = Convert.ToInt32(luePaymentTypes.Properties.GetKeyValueByDisplayValue(luePaymentTypes.EditValue));
+            Sale.PaymentConditionID = Convert.ToInt32(luePaymentTypes.EditValue);
             Sale.SaleStatus = lueSaleStatus.Text;
             Sale.Products = gcSelectedProducts.DataSource as DataTable;
+
+            DataRowView row = luePaymentTypes.Properties.GetDataSourceRowByKeyValue(luePaymentTypes.EditValue) as DataRowView;
+            Sale.PaymentConditionDays = Convert.ToInt32(row["dias"]);
+
+            if (lueSaleStatus.Text == "EN ESPERA")
+            {
+                Sale.QuotaNumber = 1;
+                Sale.AmountPerQuota = Convert.ToDecimal(this.txtTotal.Text);
+            }
 
             return Sale.SaveSale();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
             Sale = null;
             Sale = new Sale();
             sleClients.Text = "";
+            sleClientsView.SelectRow(-1);
             pceSearchProduct.Text = "";
+            gvAllProducts.SelectRow(0);
             gcSelectedProducts.DataSource = InitializeGridControlDataSource();
-            txtTotal.Text = "";
-            txtSubTotal.Text = "";
-            txtTax.Text = "";
+            txtTotal.Text = "0.00";
+            txtSubTotal.Text = "0.00";
+            txtTax.Text = "0.00";
+            txtSaleId.Text = "";
+            sleClients.Focus();
+            //lueDocumentTypes.Text = "";
+            //luePaymentTypes.Text = "";
+            //lueSaleStatus.Text = "";
         }
 
         private void btnSavePrint_Click(object sender, EventArgs e)
         {
 
-        }       
+        }
+
+        private void txtSubTotal_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtSubTotal.Text != string.Empty)
+            {
+                decimal subtotal = Convert.ToDecimal(txtSubTotal.Text);
+                decimal totalTax = subtotal * taxPercentage;
+
+                txtTax.Text = totalTax.ToString();
+                txtTotal.Text = (subtotal + totalTax).ToString();
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

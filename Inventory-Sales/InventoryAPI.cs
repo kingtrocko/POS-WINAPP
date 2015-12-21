@@ -117,7 +117,7 @@ namespace Inventory_Sales
             return ds.Tables["payment_conditions"];
         }
 
-        public DataTable GetSales(string local_id, int sale_status)
+        public DataTable GetSalesByStatus(string local_id, string sale_status)
         {
             List<Parameter> plist = new List<Parameter>();
             Parameter p = new Parameter();
@@ -126,15 +126,37 @@ namespace Inventory_Sales
             p.Type = ParameterType.QueryString;
 
             Parameter p2 = new Parameter();
-            p.Name = "status";
-            p.Value = sale_status;
-            p.Type = ParameterType.QueryString;
+            p2.Name = "status";
+            p2.Value = sale_status;
+            p2.Type = ParameterType.QueryString;
 
             plist.Add(p); plist.Add(p2);
 
             IRestResponse res = MakeHTTPRequest("/api/sales", Method.GET, plist);
             DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
             return ds.Tables["sales"];
+        }
+
+        public DataTable GetSaleProducts(int sale_id)
+        {
+            List<Parameter> plist = new List<Parameter>();
+            Parameter p = new Parameter();
+            p.Name = "id";
+            p.Value = sale_id;
+            p.Type = ParameterType.UrlSegment;
+
+            plist.Add(p);
+
+            IRestResponse res = MakeHTTPRequest("/api/sales/{id}/products", Method.GET, plist);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["sale_products"];
+        }
+
+        public DataTable GetTax()
+        {
+            IRestResponse res = MakeHTTPRequest("/api/sales/tax", Method.GET, null);
+            DataSet ds = JsonConvert.DeserializeObject<DataSet>(res.Content);
+            return ds.Tables["tax"];
         }
 
         private IRestResponse MakeHTTPRequest(string uri, Method method, List<Parameter> parameters)

@@ -414,6 +414,9 @@
   <data name="&gt;&gt;panelControl5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="txtTotal.EditValue" xml:space="preserve">
+    <value>0.00</value>
+  </data>
   <data name="txtTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>458, 75</value>
   </data>
@@ -464,6 +467,9 @@
   </data>
   <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="txtTax.EditValue" xml:space="preserve">
+    <value>0.00</value>
   </data>
   <data name="txtTax.Location" type="System.Drawing.Point, System.Drawing">
     <value>458, 42</value>
@@ -543,6 +549,9 @@
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="txtSubTotal.EditValue" xml:space="preserve">
+    <value>0.00</value>
+  </data>
   <data name="txtSubTotal.Location" type="System.Drawing.Point, System.Drawing">
     <value>458, 9</value>
   </data>
@@ -583,10 +592,26 @@
   <data name="lueSaleStatus.Properties.Columns1" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="lueSaleStatus.Properties.Columns2" xml:space="preserve">
+  <data name="lueSaleStatus.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <assembly alias="DevExpress.Data.v14.1" name="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="lueSaleStatus.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.1">
+    <value>None</value>
+  </data>
+  <data name="lueSaleStatus.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lueSaleStatus.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lueSaleStatus.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v14.1">
+    <value>Default</value>
+  </data>
+  <data name="lueSaleStatus.Properties.Columns7" xml:space="preserve">
     <value>status</value>
   </data>
-  <data name="lueSaleStatus.Properties.Columns3" xml:space="preserve">
+  <data name="lueSaleStatus.Properties.Columns8" xml:space="preserve">
     <value>Estatus Venta</value>
   </data>
   <data name="lueSaleStatus.Properties.NullText" xml:space="preserve">
@@ -628,7 +653,6 @@
   <data name="luePaymentTypes.Properties.Columns2" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <assembly alias="DevExpress.Data.v14.1" name="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="luePaymentTypes.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.1">
     <value>None</value>
   </data>
@@ -646,6 +670,12 @@
   </data>
   <data name="luePaymentTypes.Properties.Columns8" xml:space="preserve">
     <value>Tipo de Pago</value>
+  </data>
+  <data name="luePaymentTypes.Properties.Columns9" xml:space="preserve">
+    <value>dias</value>
+  </data>
+  <data name="luePaymentTypes.Properties.Columns10" xml:space="preserve">
+    <value>Dias</value>
   </data>
   <data name="luePaymentTypes.Properties.NullText" xml:space="preserve">
     <value />
@@ -683,10 +713,25 @@
   <data name="lueDocumentTypes.Properties.Columns1" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="lueDocumentTypes.Properties.Columns2" xml:space="preserve">
+  <data name="lueDocumentTypes.Properties.Columns2" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lueDocumentTypes.Properties.Columns3" type="DevExpress.Utils.FormatType, DevExpress.Data.v14.1">
+    <value>None</value>
+  </data>
+  <data name="lueDocumentTypes.Properties.Columns4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lueDocumentTypes.Properties.Columns5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lueDocumentTypes.Properties.Columns6" type="DevExpress.Utils.HorzAlignment, DevExpress.Data.v14.1">
+    <value>Default</value>
+  </data>
+  <data name="lueDocumentTypes.Properties.Columns7" xml:space="preserve">
     <value>document_type</value>
   </data>
-  <data name="lueDocumentTypes.Properties.Columns3" xml:space="preserve">
+  <data name="lueDocumentTypes.Properties.Columns8" xml:space="preserve">
     <value>Tipo Documento</value>
   </data>
   <data name="lueDocumentTypes.Properties.NullText" xml:space="preserve">
@@ -741,7 +786,7 @@
     <value>Top</value>
   </data>
   <data name="panelControl4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 355</value>
+    <value>2, 361</value>
   </data>
   <data name="panelControl4.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 169</value>
@@ -768,7 +813,7 @@
     <value>Tahoma, 12pt</value>
   </data>
   <data name="gcSelectedProducts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 110</value>
+    <value>2, 128</value>
   </data>
   <data name="gvSelectedProducts.Appearance.FocusedCell.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Red</value>
@@ -889,7 +934,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABo
-        BwAAAk1TRnQBSQFMAwEBAAEwAQABMAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        BwAAAk1TRnQBSQFMAwEBAAGgAQABoAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -927,7 +972,7 @@
     <value>Productos Seleccionados</value>
   </data>
   <data name="gcSelectedProducts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 245</value>
+    <value>593, 233</value>
   </data>
   <data name="gcSelectedProducts.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -996,7 +1041,7 @@
     <value>Top</value>
   </data>
   <data name="gcSearchProductBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 55</value>
+    <value>2, 73</value>
   </data>
   <data name="gcSearchProductBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 55</value>
@@ -1019,11 +1064,83 @@
   <data name="&gt;&gt;gcSearchProductBar.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="txtSaleId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 37</value>
+  </data>
+  <data name="txtVentaId.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11pt</value>
+  </data>
+  <data name="txtSaleId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="txtSaleId.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtSaleId.Name" xml:space="preserve">
+    <value>txtSaleId</value>
+  </data>
+  <data name="&gt;&gt;txtSaleId.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtSaleId.Parent" xml:space="preserve">
+    <value>gcSearchClientBar</value>
+  </data>
+  <data name="&gt;&gt;txtSaleId.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelControl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>424, 20</value>
+  </data>
+  <data name="labelControl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="labelControl5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value># Venta</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Name" xml:space="preserve">
+    <value>labelControl5</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.Parent" xml:space="preserve">
+    <value>gcSearchClientBar</value>
+  </data>
+  <data name="&gt;&gt;labelControl5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 20</value>
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
+  </data>
+  <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>Buscar Cliente</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
+    <value>labelControl4</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
+    <value>gcSearchClientBar</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="sleClients.EditValue" xml:space="preserve">
     <value>[EditValue is nu</value>
   </data>
   <data name="sleClients.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 23</value>
+    <value>5, 37</value>
   </data>
   <data name="sleClients.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11pt</value>
@@ -1074,7 +1191,7 @@
     <value>gcSearchClientBar</value>
   </data>
   <data name="&gt;&gt;sleClients.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="gcSearchClientBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1083,13 +1200,10 @@
     <value>2, 2</value>
   </data>
   <data name="gcSearchClientBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 53</value>
+    <value>593, 71</value>
   </data>
   <data name="gcSearchClientBar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="gcSearchClientBar.Text" xml:space="preserve">
-    <value>Buscar cliente</value>
   </data>
   <data name="&gt;&gt;gcSearchClientBar.Name" xml:space="preserve">
     <value>gcSearchClientBar</value>
@@ -1180,6 +1294,54 @@
   </data>
   <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="simpleButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 5</value>
+  </data>
+  <data name="simpleButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 49</value>
+  </data>
+  <data name="simpleButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="simpleButton2.Text" xml:space="preserve">
+    <value>simpleButton2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Name" xml:space="preserve">
+    <value>simpleButton2</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="simpleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
+  </data>
+  <data name="simpleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 49</value>
+  </data>
+  <data name="simpleButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="simpleButton1.Text" xml:space="preserve">
+    <value>simpleButton1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Name" xml:space="preserve">
+    <value>simpleButton1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;simpleButton1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>775, 12</value>
@@ -1326,7 +1488,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>59</value>
+    <value>40</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

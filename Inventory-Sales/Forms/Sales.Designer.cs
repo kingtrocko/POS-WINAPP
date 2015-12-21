@@ -89,6 +89,9 @@
             this.pceSearchProduct = new DevExpress.XtraEditors.PopupContainerEdit();
             this.popupContainerControl1 = new DevExpress.XtraEditors.PopupContainerControl();
             this.gcSearchClientBar = new DevExpress.XtraEditors.GroupControl();
+            this.txtSaleId = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.sleClients = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.sleClientsView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,6 +101,8 @@
             this.nbgSales = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiCreateNewSale = new DevExpress.XtraNavBar.NavBarItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -141,12 +146,14 @@
             this.popupContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchClientBar)).BeginInit();
             this.gcSearchClientBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sleClients.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sleClientsView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -178,6 +185,7 @@
             this.gvPrecioVenta.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvPrecioVenta.OptionsView.ShowGroupPanel = false;
             this.gvPrecioVenta.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioVenta.OptionsView.ShowViewCaption = true;
             resources.ApplyResources(this.gvPrecioVenta, "gvPrecioVenta");
             this.gvPrecioVenta.DoubleClick += new System.EventHandler(this.gvPrecioVenta_DoubleClick);
             // 
@@ -254,6 +262,7 @@
             this.gvPrecioDescuento.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvPrecioDescuento.OptionsView.ShowGroupPanel = false;
             this.gvPrecioDescuento.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
+            this.gvPrecioDescuento.OptionsView.ShowViewCaption = true;
             resources.ApplyResources(this.gvPrecioDescuento, "gvPrecioDescuento");
             // 
             // gridColumn28
@@ -488,6 +497,7 @@
             this.txtSubTotal.Properties.DisplayFormat.FormatString = "c";
             this.txtSubTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtSubTotal.Properties.ReadOnly = true;
+            this.txtSubTotal.EditValueChanged += new System.EventHandler(this.txtSubTotal_EditValueChanged);
             // 
             // groupControl1
             // 
@@ -507,8 +517,8 @@
             this.lueSaleStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lueSaleStatus.Properties.Buttons"))))});
             this.lueSaleStatus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns"), resources.GetString("lueSaleStatus.Properties.Columns1")),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns2"), resources.GetString("lueSaleStatus.Properties.Columns3"))});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns"), resources.GetString("lueSaleStatus.Properties.Columns1"), ((int)(resources.GetObject("lueSaleStatus.Properties.Columns2"))), ((DevExpress.Utils.FormatType)(resources.GetObject("lueSaleStatus.Properties.Columns3"))), resources.GetString("lueSaleStatus.Properties.Columns4"), ((bool)(resources.GetObject("lueSaleStatus.Properties.Columns5"))), ((DevExpress.Utils.HorzAlignment)(resources.GetObject("lueSaleStatus.Properties.Columns6")))),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueSaleStatus.Properties.Columns7"), resources.GetString("lueSaleStatus.Properties.Columns8"))});
             this.lueSaleStatus.Properties.NullText = resources.GetString("lueSaleStatus.Properties.NullText");
             this.lueSaleStatus.Properties.PopupSizeable = false;
             // 
@@ -523,7 +533,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("luePaymentTypes.Properties.Buttons"))))});
             this.luePaymentTypes.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns"), resources.GetString("luePaymentTypes.Properties.Columns1"), ((int)(resources.GetObject("luePaymentTypes.Properties.Columns2"))), ((DevExpress.Utils.FormatType)(resources.GetObject("luePaymentTypes.Properties.Columns3"))), resources.GetString("luePaymentTypes.Properties.Columns4"), ((bool)(resources.GetObject("luePaymentTypes.Properties.Columns5"))), ((DevExpress.Utils.HorzAlignment)(resources.GetObject("luePaymentTypes.Properties.Columns6")))),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns7"), resources.GetString("luePaymentTypes.Properties.Columns8"))});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns7"), resources.GetString("luePaymentTypes.Properties.Columns8")),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("luePaymentTypes.Properties.Columns9"), resources.GetString("luePaymentTypes.Properties.Columns10"))});
             this.luePaymentTypes.Properties.NullText = resources.GetString("luePaymentTypes.Properties.NullText");
             this.luePaymentTypes.Properties.PopupSizeable = false;
             // 
@@ -537,8 +548,8 @@
             this.lueDocumentTypes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("lueDocumentTypes.Properties.Buttons"))))});
             this.lueDocumentTypes.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns"), resources.GetString("lueDocumentTypes.Properties.Columns1")),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns2"), resources.GetString("lueDocumentTypes.Properties.Columns3"))});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns"), resources.GetString("lueDocumentTypes.Properties.Columns1"), ((int)(resources.GetObject("lueDocumentTypes.Properties.Columns2"))), ((DevExpress.Utils.FormatType)(resources.GetObject("lueDocumentTypes.Properties.Columns3"))), resources.GetString("lueDocumentTypes.Properties.Columns4"), ((bool)(resources.GetObject("lueDocumentTypes.Properties.Columns5"))), ((DevExpress.Utils.HorzAlignment)(resources.GetObject("lueDocumentTypes.Properties.Columns6")))),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo(resources.GetString("lueDocumentTypes.Properties.Columns7"), resources.GetString("lueDocumentTypes.Properties.Columns8"))});
             this.lueDocumentTypes.Properties.NullText = resources.GetString("lueDocumentTypes.Properties.NullText");
             this.lueDocumentTypes.Properties.PopupSizeable = false;
             // 
@@ -715,9 +726,30 @@
             // 
             // gcSearchClientBar
             // 
+            this.gcSearchClientBar.Controls.Add(this.txtSaleId);
+            this.gcSearchClientBar.Controls.Add(this.labelControl5);
+            this.gcSearchClientBar.Controls.Add(this.labelControl4);
             this.gcSearchClientBar.Controls.Add(this.sleClients);
             resources.ApplyResources(this.gcSearchClientBar, "gcSearchClientBar");
             this.gcSearchClientBar.Name = "gcSearchClientBar";
+            // 
+            // txtSaleId
+            // 
+            resources.ApplyResources(this.txtSaleId, "txtSaleId");
+            this.txtSaleId.Name = "txtSaleId";
+            this.txtSaleId.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("txtVentaId.Properties.Appearance.Font")));
+            this.txtSaleId.Properties.Appearance.Options.UseFont = true;
+            this.txtSaleId.Properties.ReadOnly = true;
+            // 
+            // labelControl5
+            // 
+            resources.ApplyResources(this.labelControl5, "labelControl5");
+            this.labelControl5.Name = "labelControl5";
+            // 
+            // labelControl4
+            // 
+            resources.ApplyResources(this.labelControl4, "labelControl4");
+            this.labelControl4.Name = "labelControl4";
             // 
             // sleClients
             // 
@@ -799,8 +831,20 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.simpleButton1);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
+            // 
+            // simpleButton2
+            // 
+            resources.ApplyResources(this.simpleButton2, "simpleButton2");
+            this.simpleButton2.Name = "simpleButton2";
+            // 
+            // simpleButton1
+            // 
+            resources.ApplyResources(this.simpleButton1, "simpleButton1");
+            this.simpleButton1.Name = "simpleButton1";
             // 
             // layoutControlGroup1
             // 
@@ -913,6 +957,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
+            this.KeyPreview = true;
             this.Name = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).EndInit();
@@ -946,12 +991,15 @@
             this.popupContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcSearchClientBar)).EndInit();
             this.gcSearchClientBar.ResumeLayout(false);
+            this.gcSearchClientBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sleClients.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sleClientsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nbcSideBarMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -1043,6 +1091,11 @@
         private DevExpress.XtraEditors.LookUpEdit lueSaleStatus;
         private DevExpress.XtraEditors.LookUpEdit lueDocumentTypes;
         private DevExpress.XtraEditors.LookUpEdit luePaymentTypes;
+        private DevExpress.XtraEditors.TextEdit txtSaleId;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
 
     }
 }
