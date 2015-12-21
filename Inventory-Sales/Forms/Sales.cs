@@ -265,7 +265,7 @@ namespace Inventory_Sales.Forms
                 dtSelectedProducts = products;
                 this.gcSelectedProducts.DataSource = dtSelectedProducts;
 
-            }
+            }            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -284,6 +284,7 @@ namespace Inventory_Sales.Forms
                 if (saleStatus != "EN ESPERA")
                 {
                     DialogResult dialogResult = dialog.ShowDialog(this);
+                    splashScreenManager1.ShowWaitForm();
 
                     if (txtSaleId.Text == string.Empty)
                     {
@@ -295,10 +296,12 @@ namespace Inventory_Sales.Forms
                         Sale.SaleID = Convert.ToInt32(txtSaleId.Text);
                         success = SaveOrUpdateSale(dialog, "update");
                     }
-                        
+
+                    splashScreenManager1.CloseWaitForm();
                 }
                 else
                 {
+                    splashScreenManager1.ShowWaitForm();
                     if (txtSaleId.Text == string.Empty)
                         success = SaveOrUpdateSale(dialog, "save");
                     else
@@ -306,7 +309,7 @@ namespace Inventory_Sales.Forms
                         Sale.SaleID = Convert.ToInt32(txtSaleId.Text);
                         success = SaveOrUpdateSale(dialog, "update");
                     }
-                        
+                    splashScreenManager1.ShowWaitForm();
                 }
                     
 
