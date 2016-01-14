@@ -171,6 +171,7 @@
             this.gridColumn27,
             this.gridColumn31,
             this.gridColumn32});
+            this.gvPrecioVenta.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvPrecioVenta.GridControl = this.gcAllProducts;
             this.gvPrecioVenta.Name = "gvPrecioVenta";
             this.gvPrecioVenta.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -183,6 +184,8 @@
             this.gvPrecioVenta.OptionsCustomization.AllowGroup = false;
             this.gvPrecioVenta.OptionsCustomization.AllowQuickHideColumns = false;
             this.gvPrecioVenta.OptionsCustomization.AllowSort = false;
+            this.gvPrecioVenta.OptionsNavigation.AutoMoveRowFocus = false;
+            this.gvPrecioVenta.OptionsNavigation.UseTabKey = false;
             this.gvPrecioVenta.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvPrecioVenta.OptionsView.ShowGroupPanel = false;
             this.gvPrecioVenta.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
@@ -239,6 +242,7 @@
             this.gvPrecioDescuento,
             this.gvAllProducts,
             this.gvPrecioVenta});
+            this.gcAllProducts.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gcAllProducts_ProcessGridKey);
             // 
             // gvPrecioDescuento
             // 
@@ -305,6 +309,7 @@
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn35});
+            this.gvAllProducts.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gvAllProducts.GridControl = this.gcAllProducts;
             this.gvAllProducts.Name = "gvAllProducts";
             this.gvAllProducts.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
@@ -323,6 +328,8 @@
             this.gvAllProducts.OptionsFind.AlwaysVisible = true;
             this.gvAllProducts.OptionsFind.ShowCloseButton = false;
             this.gvAllProducts.OptionsFind.ShowFindButton = false;
+            this.gvAllProducts.OptionsNavigation.AutoMoveRowFocus = false;
+            this.gvAllProducts.OptionsNavigation.UseTabKey = false;
             this.gvAllProducts.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gvAllProducts.OptionsView.ColumnAutoWidth = false;
             this.gvAllProducts.OptionsView.ShowGroupPanel = false;

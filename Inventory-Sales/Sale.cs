@@ -64,6 +64,7 @@ namespace Inventory_Sales
             }
             catch (Exception e)
             {
+                WriteLog(e);
                 transaction.Rollback();
                 Debug.WriteLine("==================== ERROR MESSAGE ====================");
                 Debug.WriteLine(e.Message);
@@ -95,6 +96,7 @@ namespace Inventory_Sales
             }
             catch (Exception e)
             {
+                WriteLog(e);
                 transaction.Rollback();
                 Debug.WriteLine("==================== ERROR MESSAGE ====================");
                 Debug.WriteLine(e.Message);
@@ -109,6 +111,17 @@ namespace Inventory_Sales
                 connection.Close();
                 connection.Dispose();
             }
+        }
+
+        private void WriteLog(Exception error)
+        {
+            string query = "INSERT INTO error_logs (message,stack_trace,inner_exception,error_date) VALUES(@message,@stack_trace,@inner_exception,@date)";
+            MySqlCommand cmd = new MySqlCommand(query, this.connection);
+            cmd.Parameters.AddWithValue("@message", error.Message);
+            cmd.Parameters.AddWithValue("@stack_trace", error.StackTrace);
+            cmd.Parameters.AddWithValue("@inner_exception", error.InnerException);
+            cmd.Parameters.AddWithValue("@date", DateTime.Now);
+            cmd.ExecuteNonQuery();
         }
 
         private long InsertDocumentSale()

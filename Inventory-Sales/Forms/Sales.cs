@@ -22,7 +22,7 @@ namespace Inventory_Sales.Forms
         private DataTable dtPaymentTypes;
         private InventoryAPI API;
         private Sale Sale;
-        private int selectedProductRowHandle = -1;
+        //private int selectedProductRowHandle = -1;
         private decimal taxPercentage;
 
         public Sales()
@@ -187,9 +187,9 @@ namespace Inventory_Sales.Forms
 
         private void gvAllProducts_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
-            GridView grid = sender as GridView;
-            grid.ExpandMasterRow(e.FocusedRowHandle);
-            selectedProductRowHandle = e.FocusedRowHandle;
+            //GridView grid = sender as GridView;
+            //grid.ExpandMasterRow(e.FocusedRowHandle);
+            //selectedProductRowHandle = e.FocusedRowHandle;
         }
 
         private void gvPrecioVenta_DoubleClick(object sender, EventArgs e)
@@ -309,7 +309,7 @@ namespace Inventory_Sales.Forms
                         Sale.SaleID = Convert.ToInt32(txtSaleId.Text);
                         success = SaveOrUpdateSale(dialog, "update");
                     }
-                    splashScreenManager1.ShowWaitForm();
+                    splashScreenManager1.CloseWaitForm();
                 }
                     
 
@@ -566,6 +566,26 @@ namespace Inventory_Sales.Forms
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        //To handle the navigation between the detail tabs
+        private void gcAllProducts_ProcessGridKey(object sender, KeyEventArgs e)
+        {
+            GridView gridView = gcAllProducts.FocusedView as GridView;
+            Keys pressedKey = e.KeyCode;
+
+            if (gridView.IsDetailView && (pressedKey == Keys.Left || pressedKey == Keys.Right))
+            {
+                GridView allProductsGv = gridView.ParentView as GridView;
+
+                int focusedMasterRowHandle = allProductsGv.SourceRowHandle;
+                string relationName = gridView.LevelName;
+                int tabIndex = allProductsGv.GetRelationIndex(focusedMasterRowHandle, relationName);
+                if(tabIndex == 0)
+                    allProductsGv.SetMasterRowExpandedEx(focusedMasterRowHandle, 1, true);
+                else
+                    allProductsGv.SetMasterRowExpandedEx(focusedMasterRowHandle, 0, true);
+            }
         }
     }
 }
