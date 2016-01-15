@@ -243,6 +243,7 @@
             this.gvAllProducts,
             this.gvPrecioVenta});
             this.gcAllProducts.ProcessGridKey += new System.Windows.Forms.KeyEventHandler(this.gcAllProducts_ProcessGridKey);
+            this.gcAllProducts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gcAllProducts_KeyDown);
             // 
             // gvPrecioDescuento
             // 
@@ -341,6 +342,7 @@
             this.gvAllProducts.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvAllProducts_MasterRowGetRelationCount);
             this.gvAllProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvAllProducts_FocusedRowChanged);
             this.gvAllProducts.ColumnFilterChanged += new System.EventHandler(this.gvAllProducts_ColumnFilterChanged);
+            this.gvAllProducts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gvAllProducts_KeyDown);
             // 
             // gridColumn10
             // 
@@ -725,6 +727,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("pceSearchProduct.Properties.Buttons"))))});
             this.pceSearchProduct.Properties.PopupControl = this.popupContainerControl1;
             this.pceSearchProduct.Properties.PopupSizeable = false;
+            this.pceSearchProduct.QueryCloseUp += new System.ComponentModel.CancelEventHandler(this.pceSearchProduct_QueryCloseUp);
             // 
             // popupContainerControl1
             // 
@@ -968,6 +971,7 @@
             this.KeyPreview = true;
             this.Name = "Sales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Sales_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPrecioDescuento)).EndInit();

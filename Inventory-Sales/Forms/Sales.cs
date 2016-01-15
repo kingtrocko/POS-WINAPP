@@ -12,6 +12,8 @@ using DevExpress.XtraGrid.Views.Base;
 using System.Collections;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using System.Diagnostics;
+using DevExpress.XtraGrid.Controls;
 
 namespace Inventory_Sales.Forms
 {
@@ -22,7 +24,7 @@ namespace Inventory_Sales.Forms
         private DataTable dtPaymentTypes;
         private InventoryAPI API;
         private Sale Sale;
-        //private int selectedProductRowHandle = -1;
+        private int selectedProductRowHandle = -1;
         private decimal taxPercentage;
 
         public Sales()
@@ -47,6 +49,9 @@ namespace Inventory_Sales.Forms
             sleClients.Properties.DataSource = API.GetClients();
             sleClients.Properties.DisplayMember = "razon_social";
             sleClients.Properties.ValueMember = "id_cliente";
+            //sleClients.EditValue = 2;
+
+            //pceSearchProduct.Show();
 
             //Some settings for gridviews
             gvAllProducts.BestFitColumns(true);
@@ -189,7 +194,7 @@ namespace Inventory_Sales.Forms
         {
             //GridView grid = sender as GridView;
             //grid.ExpandMasterRow(e.FocusedRowHandle);
-            //selectedProductRowHandle = e.FocusedRowHandle;
+            selectedProductRowHandle = e.FocusedRowHandle;
         }
 
         private void gvPrecioVenta_DoubleClick(object sender, EventArgs e)
@@ -245,7 +250,8 @@ namespace Inventory_Sales.Forms
             string client_name = Convert.ToString(sleClientsView.GetFocusedRowCellValue("razon_social"));
 
             //sleClients.Text = String.Format("{0} - {1}", client_id, client_name);
-            pceSearchProduct.Focus();
+            //pceSearchProduct.Focus();
+            pceSearchProduct.ShowPopup();
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -548,7 +554,7 @@ namespace Inventory_Sales.Forms
 
         private void btnSavePrint_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtSubTotal_EditValueChanged(object sender, EventArgs e)
@@ -578,13 +584,50 @@ namespace Inventory_Sales.Forms
             {
                 GridView allProductsGv = gridView.ParentView as GridView;
 
-                int focusedMasterRowHandle = allProductsGv.SourceRowHandle;
+                int focusedMasterRowHandle = selectedProductRowHandle; //allProductsGv.SourceRowHandle;
                 string relationName = gridView.LevelName;
                 int tabIndex = allProductsGv.GetRelationIndex(focusedMasterRowHandle, relationName);
+                Debug.WriteLine("the tabIndex is " + tabIndex.ToString());
                 if(tabIndex == 0)
+                    //gvAllProducts.SetMasterRowExpandedEx(0, 1, true);
                     allProductsGv.SetMasterRowExpandedEx(focusedMasterRowHandle, 1, true);
                 else
+                    //gvAllProducts.SetMasterRowExpandedEx(0, 0, true);
                     allProductsGv.SetMasterRowExpandedEx(focusedMasterRowHandle, 0, true);
+            }
+        }
+
+        private void Sales_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.Modifiers == Keys.Control && e.KeyCode == Keys.B) && !pceSearchProduct.IsPopupOpen)
+            {
+                pceSearchProduct.ShowPopup();
+            }
+        }
+
+        private void pceSearchProduct_QueryCloseUp(object sender, CancelEventArgs e)
+        {
+            // To prevent close the All-products popup on ESC key pressed.
+            e.Cancel = true;
+        }
+
+        private void gvAllProducts_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void gcAllProducts_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                gvAllProducts.ApplyFindFilter("");
             }
         }
     }
